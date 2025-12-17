@@ -1,0 +1,92 @@
+.pagination-custom {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.text-required:after {
+    content: "*";
+    color: red;
+}
+
+.wrap-text {
+    white-space: pre-wrap;
+}
+
+.btn-admin-search {
+    min-width: 150px;
+}
+
+.btn-form {
+    width: 150px;
+    font-weight: bold;
+}
+
+.btn-form-search {
+    width: 200px;
+    height: 53px;
+    font-weight: bold;
+    font-size: 136%;
+    border: 1px solid #039;
+}
+
+.btn-act-grid:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.w-20px {width: 20px;}
+.w-100px {width: 100px;}
+.w-50px {width: 50px;}
+.w-70px {width: 70px;}
+.w-120px {width: 120px;}
+.w-150px {width: 150px;}
+
+.w-5{width: 5%;}
+.w-10{width: 10%;}
+.w-15{width: 15%;}
+.w-20{width: 20%;}
+.w-30{width: 30%;}
+.w-35{width: 35%;}
+.w-45{width: 45%;}
+.w-95{width: 95%;}
+.w-90{width: 90%;}
+
+table > thead > tr > th {
+    background-color: #404d6c;
+    color: white;
+    font-weight: bold;
+}
+
+.table-custom tr td{
+    vertical-align: middle;
+}
+
+.td-middle {
+    vertical-align: middle !important;
+}
+
+.bg-grey {
+    background-color: #cecece;
+}
+.error-message {
+    color: #f00;
+    font-weight: bold;
+    padding-top: 5px;
+}
+.msg_true {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 108%;
+    background-color: #d2eeff;
+    border: 1px solid #97cbff;
+    padding-left: 10px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+

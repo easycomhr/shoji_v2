@@ -1,0 +1,130 @@
+@import 'Admin-all_1.css';
+@import 'Admin-all_2.css';
+@import 'Admin-all_3.css';
+
+.no-icon {
+	display : none !important;
+}
+
+.icon-user {
+    background-image: url(images/icons/fam/user.png) !important;
+}
+
+.icon-user-add {
+    background-image: url(images/icons/fam/user_add.gif) !important;
+}
+
+.icon-save {
+    background-image: url(images/icons/fam/save.gif) !important;
+}
+
+.icon-reset {
+    background-image: url(images/icons/fam/stop.png) !important;
+}
+
+.icon-grid {
+    background-image: url(images/icons/fam/grid.png) !important;
+}
+
+.icon-add {
+    background-image: url(images/icons/fam/add.png) !important;
+}
+
+.icon-delete {
+    background-image: url(images/icons/fam/delete.png) !important;
+}
+
+.icon-find{
+    background-image: url(images/icons/fam/find.png) !important;
+}
+
+.icon-export {
+    background-image: url(images/icons/fam/ic_export.png) !important;
+}
+
+.icon-import {
+    background-image: url(images/icons/fam/ic_import.png) !important;
+}
+
+.upload-icon {
+    background-image: url(images/icons/fam/image_add.png) !important;
+}
+
+.icon-chart{
+    background-image: url(images/icons/fam/chart1.png) !important;
+}
+
+.icon-process{ background-image: url(images/icons/fam/process.png) !important; }
+.icon-work-process{ background-image: url(images/icons/fam/work-process.png) !important; }
+.icon-back{ background-image: url(images/icons/fam/left-arrow.png) !important; }
+.icon-refresh{ background-image: url(images/icons/fam/refresh.png) !important; }
+.icon-export{ background-image: url(images/icons/fam/export.png) !important; }
+
+.cell-editing-delete-row, .cell-editing-delete-row:before {
+    font: 18px/1 FontAwesome;
+    color: #dd6550;
+    content: "\f1f8";
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}
+
+.cell-editing-edit-row, .cell-editing-edit-row:before {
+    font: 18px/1 FontAwesome;
+    color: #32c5d2;
+    content: "\f044";
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}
+
+.cell-editing-profile-row, .cell-editing-profile-row:before {
+    font: 18px/1 FontAwesome;
+    color: #F39C12;
+    content: "\f007";
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}
+
+div[id^="PagingToolbarId"] > div[id^="numberfield"] {
+	width: 36px !important;
+	left: 130px !important;
+}
+
+.dep-level0 {
+    font-weight: bold;
+}
+
+.dep-level1 {
+    padding-left: 5px;
+}
+
+.dep-level2 {
+    padding-left: 10px;
+}
+
+.dep-level3 {
+    padding-left: 15px;
+}
+
+.dep-level4 {
+    padding-left: 20px;
+}
+
+.perspective{
+	background-color: yellow;
+}
+
+.objectivecategory{
+	background-color: #92CDDC;
+}
+
+a:hover, a:visited, a:link, a:active, a:focus{
+    text-decoration: none;
+}
+
+input[type="radio"], input[type="radio"]:focus{
+	margin-top: 0px !important;
+}
+
+.my-fieldset .x-fieldset-header-text {
+  font-size: 12px !important;
+}

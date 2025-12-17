@@ -1,0 +1,2912 @@
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-tab .x-arrow-el:before {
+    font-size: 22px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1338 */
+.x-tab.x-arrow-align-right .x-arrow-el {
+    margin-left: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1342 */
+.x-big .x-tab.x-arrow-align-right .x-arrow-el {
+    margin-left: 8px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1358 */
+.x-tab .x-text-el {
+    min-height: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1364 */
+.x-big .x-tab .x-text-el {
+    min-height: 22px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+.x-tab .x-badge-el {
+    color: #f0f0f0;
+    border-color: #661a00;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    padding: 1px 4px;
+    max-width: 95%;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    background-image: -webkit-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    background-image: -moz-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    background-image: -o-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    background-image: -ms-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1385 */
+.x-big .x-tab .x-badge-el {
+    font-size: 13px;
+    line-height: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-tab.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-tab.x-hovered .x-inner-el {
+    background-color: rgba(0, 0, 0, 0.08);
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-tab.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-tab.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-tab.x-pressing,
+.x-tab.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-tab.x-pressing .x-inner-el,
+.x-tab.x-pressed .x-inner-el {
+    background-color: rgba(0, 0, 0, 0.08);
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-tab.x-pressing .x-icon-el,
+.x-tab.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-tab.x-pressing .x-arrow-el,
+.x-tab.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1440 */
+.x-keyboard-mode .x-tab.x-focused {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1449 */
+.x-keyboard-mode .x-tab.x-focused .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1453 */
+.x-keyboard-mode .x-tab.x-focused .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-tab.x-focused:after {
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    border: 1px solid rgba(240, 240, 240, 0.8);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1483 */
+.x-tab.x-disabled {
+    opacity: 0.5;
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1493 */
+.x-tab.x-disabled .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1497 */
+.x-tab.x-disabled .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1402 */
+.x-tab .x-close-icon-el {
+    border-radius: 3px;
+    margin: 3px;
+    color: #f0f0f0;
+    width: 16px;
+    height: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+.x-big .x-tab .x-close-icon-el {
+    width: 20px;
+    height: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-tab .x-close-icon-el:before {
+    content: "\f00d";
+    font-size: 14px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-tab .x-close-icon-el:before {
+    font-size: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1423 */
+.x-tab .x-close-icon-el:hover {
+    color: rgba(240, 240, 240, 0.8);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1428 */
+.x-tab .x-close-icon-el:active {
+    color: rgba(240, 240, 240, 0.6);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1434 */
+.x-tab.x-active {
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1438 */
+.x-tab.x-active .x-inner-el {
+    background-color: #fff;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1443 */
+.x-tab.x-active .x-icon-el {
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1447 */
+.x-tab.x-active .x-arrow-el {
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1456 */
+.x-tab.x-active .x-close-icon-el {
+    color: #919191;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1460 */
+.x-tab.x-active .x-close-icon-el:hover {
+    color: rgba(145, 145, 145, 0.8);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1465 */
+.x-tab.x-active .x-close-icon-el:active {
+    color: rgba(145, 145, 145, 0.6);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1472 */
+.x-tab.x-active.x-focused {
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1481 */
+.x-tab.x-active.x-focused .x-icon-el {
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1485 */
+.x-tab.x-active.x-focused .x-arrow-el {
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1490 */
+.x-keyboard-mode .x-tab.x-active.x-focused:after {
+    border-color: #5dc8f8;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1509 */
+.x-tab.x-closable .x-body-el {
+    margin-right: 15px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1513 */
+.x-big .x-tab.x-closable .x-body-el {
+    margin-right: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:330 */
+.x-tabbar {
+    background-color: #35baf6;
+    background-image: none;
+    border-color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:344 */
+.x-tabbar .x-title {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:362 */
+.x-tabbar-body-el {
+    padding: 8px 8px 0;
+    min-height: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:367 */
+.x-big .x-tabbar-body-el {
+    padding: 12px 12px 0;
+    min-height: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:374 */
+.x-tabbar-body-el.x-horizontal > .x-component {
+    margin-right: 4px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:378 */
+.x-big .x-tabbar-body-el.x-horizontal > .x-component {
+    margin-right: 4px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:383 */
+.x-tabbar-body-el.x-horizontal > .x-component:last-child {
+    margin-right: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Bar.scss:335 */
+.x-strip-el {
+    background-color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:433 */
+.x-treecell {
+    padding: 0 10px;
+    background-position: 21px 0%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:437 */
+.x-big .x-treecell {
+    padding: 0 15px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:442 */
+.x-treecell .x-expander-el {
+    color: #919191;
+    width: 16px;
+    height: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+.x-big .x-treecell .x-expander-el {
+    width: 18px;
+    height: 18px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-treecell .x-expander-el:before {
+    content: "\f0da";
+    font-size: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-treecell .x-expander-el:before {
+    font-size: 18px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-treecell.x-expanded .x-expander-el:before {
+    content: "\f0d7";
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:457 */
+.x-treecell .x-icon-el {
+    color: #919191;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+.x-big .x-treecell .x-icon-el {
+    width: 18px;
+    height: 18px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-treecell .x-icon-el:before {
+    font-size: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-treecell .x-icon-el:before {
+    font-size: 18px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:469 */
+.x-big .x-treecell .x-icon-el {
+    margin: 0 8px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-treecell.x-no-icon .x-icon-el:before {
+    content: "\f07b";
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-treecell.x-no-icon.x-expanded .x-icon-el:before {
+    content: "\f07c";
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-treecell.x-no-icon.x-leaf .x-icon-el:before {
+    content: "\f15b";
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:495 */
+.x-big .x-treecell {
+    background-position: 26px 0%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:501 */
+.x-treecell-body-el,
+.x-treecell-tool-dock > .x-body-el {
+    padding: 8px 0 7px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/grid/cell/Tree.scss:506 */
+.x-big .x-treecell-body-el,
+.x-big .x-treecell-tool-dock > .x-body-el {
+    padding: 12px 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/draw/Surface.scss:2 */
+.x-surface,
+.x-surface-canvas {
+    position: absolute;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/draw/Container.scss:1 */
+.x-draw-container {
+    position: relative;
+    cursor: default;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:1 */
+.x-legend {
+    background: #fff;
+    outline: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:6 */
+.x-legend-horizontal {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:12 */
+.x-legend-horizontal .x-legend-item {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:19 */
+.x-legend-horizontal .x-legend-item:first-child {
+    border-left: 1px solid #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:31 */
+.x-legend-horizontal.x-rtl .x-legend-item:first-child {
+    border-right: 1px solid #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:36 */
+.x-legend-horizontal.x-rtl .x-legend-item:last-child {
+    border-right: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:44 */
+.x-legend-vertical {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:49 */
+.x-legend-vertical .x-legend-item {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:54 */
+.x-legend-vertical .x-legend-item:first-child {
+    border-top: 1px solid #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:67 */
+.x-legend-item-inactive {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:71 */
+.x-legend-item {
+    padding: 0.8em 0.6em 0.8em 1.8em;
+    color: #333;
+    background: rgba(255, 255, 255, 0);
+    max-width: 16em;
+    min-width: 0;
+    font-size: 13px;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    line-height: 13px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:87 */
+.x-rtl > * > .x-legend-item {
+    padding: 0.8em 1.8em 0.8em 1em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:91 */
+.x-legend-item-marker {
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 0 inset;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 0 inset;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 0 inset;
+    left: 0.7em;
+    top: 0.85em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:103 */
+.x-rtl > * > * > .x-legend-item-marker {
+    right: 0.7em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/draw/Container.scss:1 */
+.x-chart-preview > img {
+    width: 100% !important;
+    height: auto !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:13 */
+.x-legend .x-legend-body-el {
+    /*
+ * The DOM looks like this:
+ *
+ *     ext-legend
+ *         x-legend-body-el x-legend-horizontal/vertical
+ *             x-legend-item
+ *             x-legend-item
+ *
+ * The `x-legend-body-el` is what is being scrolled.
+ */
+    display: inline-block;
+    margin: auto;
+    white-space: nowrap !important;
+    line-height: 0;
+    background: #fff;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0 1px 1px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.6) 0 1px 1px;
+    box-shadow: rgba(255, 255, 255, 0.6) 0 1px 1px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:29 */
+.x-legend-horizontal .x-legend-body-el {
+    display: table;
+    margin: 0 auto;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:35 */
+.x-legend-item {
+    font-size: 13px;
+    line-height: 13px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:40 */
+.x-legend-item-marker {
+    top: 0.95em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:44 */
+.x-legend-body-el {
+    white-space: nowrap;
+    padding: 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:49 */
+.x-legend-horizontal {
+    overflow-x: auto;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:53 */
+.x-legend-vertical .x-legend-body-el {
+    overflow-y: auto;
+    flex: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:1 */
+.x-chart-toolbar {
+    position: absolute;
+    z-index: 9;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    padding: 0.6em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:7 */
+.x-chart-toolbar .x-button {
+    margin: 0.2em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:11 */
+.x-chart-toolbar[data-side=left],
+.x-chart-toolbar[data-side=right] {
+    top: 0;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:16 */
+.x-chart-toolbar[data-side=left] {
+    left: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:20 */
+.x-chart-toolbar[data-side=right] {
+    right: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:24 */
+.x-chart-toolbar[data-side=top],
+.x-chart-toolbar[data-side=bottom] {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+    right: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:29 */
+.x-chart-toolbar[data-side=top] {
+    top: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/charts/modern/sass/src/chart/AbstractChart.scss:33 */
+.x-chart-toolbar[data-side=bottom] {
+    bottom: 0;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/Gauge.scss:1 */
+.x-gauge svg {
+    display: block;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/Gauge.scss:6 */
+.x-gauge-text {
+    position: absolute;
+    text-align: center;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/var/Gauge.scss:28 */
+.x-gauge svg {
+    display: block;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/var/Gauge.scss:31 */
+.x-gauge .x-gauge-track {
+    fill: #ececec;
+    fill-opacity: 1;
+    stroke: #d0d0d0;
+    stroke-opacity: 1;
+    stroke-width: 1;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/var/Gauge.scss:39 */
+.x-gauge .x-gauge-value {
+    fill: #458fd2;
+    fill-opacity: 1;
+    stroke: none;
+    stroke-opacity: 1;
+    stroke-width: 1;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:1 */
+.ux-rating-picker {
+    overflow: hidden;
+    color: #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    opacity: 0.8;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:15 */
+.ux-rating-picker-inner {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    white-space: nowrap;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:28 */
+.ux-rating-picker-over.ux-rating-picker-track-over {
+    color: #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:31 */
+.ux-rating-picker-over.ux-rating-picker-track-over > * > .ux-rating-picker-value {
+    display: none;
+    width: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:36 */
+.ux-rating-picker-over.ux-rating-picker-track-over > * > .ux-rating-picker-value:hover {
+    color: inherit;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:40 */
+.ux-rating-picker-over.ux-rating-picker-track-over > * > .ux-rating-picker-tracker {
+    display: inline-block;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:45 */
+.ux-rating-picker-value,
+.ux-rating-picker-tracker {
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    width: 0;
+    height: 100%;
+    color: #ffe850;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:58 */
+.ux-rating-picker-tracker {
+    display: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/packages/ux/sass/src/rating/Picker.scss:62 */
+.ux-rating-picker-over {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/dashboard/Weather.scss:1 */
+.weather-panel {
+    background: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/dashboard/Weather.scss:5 */
+.weather-image-container {
+    height: 80px;
+    width: 100px;
+    float: left;
+    background: #82d9ea;
+    text-align: center;
+    padding-top: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/dashboard/Weather.scss:14 */
+.weather-details-container {
+    color: #458fd2;
+    line-height: 20px;
+    float: left;
+    padding: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/dashboard/Weather.scss:20 */
+.weather-details-container :first-child {
+    margin-bottom: 4px;
+    font-size: 30px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:1 */
+.forms-specialoffer {
+    background-color: #579ddb;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:7 */
+.forms-specialoffer h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:14 */
+.specialoffer-outer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 1.4em;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:23 */
+.specialoffer-outer:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:30 */
+.specialoffer-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:35 */
+.specialoffer-icon-wrap {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.2em;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:43 */
+.specialoffer-text {
+    font-weight: 400;
+    margin: 1em 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:48 */
+.specialoffer-discount {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:53 */
+.specialoffer-link {
+    padding: 1em 1.2em 0.3em;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/forms/SpecialOffer.scss:60 */
+.specialoffer-link:before {
+    padding-right: 0.5em;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:2 */
+.userProfile-container .userProfilePic {
+    border: 4px solid #ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:7 */
+.userProfile-container .userProfileName {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #404040;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:14 */
+.userProfile-container .userProfileDesc {
+    color: #404040;
+    line-height: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:21 */
+.userProfile-container .user-profile-desc .x-box-item:before,
+.userProfile-container .user-profile-desc .x-layout-box-item:before {
+    color: #35baf6;
+    margin-right: 12px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:30 */
+.userProfile-container .user-profile-desc a {
+    color: #404040;
+    text-decoration: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:35 */
+.userProfile-container .user-profile-desc .box {
+    margin-left: 40px;
+    line-height: 14px;
+    font-size: 14px;
+    line-height: 18px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:41 */
+.userProfile-container .user-profile-desc .box:before {
+    margin-left: -20px;
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:47 */
+.userProfile-container .user-profile-desc .x-toolbar {
+    border: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:52 */
+.userProfile-container .about-me-wrap {
+    border-top: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:55 */
+.userProfile-container .about-me-wrap h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 0 10px 0;
+    display: block;
+    margin-left: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:63 */
+.userProfile-container .about-me-wrap h3:before {
+    font-size: 18px;
+    font-weight: normal;
+    color: #35baf6;
+    margin-right: 12px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:71 */
+.userProfile-container .about-me-wrap p {
+    margin: 0;
+    padding: 0 20px 20px 26px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:77 */
+.userProfile-container .likes-friends-wrap {
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:81 */
+.userProfile-container .likes-friends-wrap .x-panel {
+    margin-top: 12px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:85 */
+.userProfile-container .likes-friends-wrap .friends-count-wrap {
+    border-left: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:91 */
+.userProfile-container .large-icon:before {
+    color: #35baf6;
+    font-size: 35px !important;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:98 */
+.userProfile-container .icon-padding:before {
+    padding: 16px;
+    color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:104 */
+.userProfile-container .tall-separator {
+    height: 48px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:108 */
+.userProfile-container .fa-ellipsis-v {
+    font-size: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:112 */
+.userProfile-container .likes-value,
+.userProfile-container .friends-value {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:119 */
+.userProfile-container .comments {
+    margin-bottom: 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:123 */
+.userProfile-container .comments img.profile-icon {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:132 */
+.userProfile-container .comments h4 {
+    font-size: 14px;
+    margin: 0 10px 12px 0;
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:137 */
+.userProfile-container .comments h4 span {
+    margin-left: 8px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:145 */
+.userProfile-container .comments .from-now {
+    float: right;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:148 */
+.userProfile-container .comments .from-now span {
+    margin-right: 5px;
+    font-size: 16px;
+    position: relative;
+    top: 1px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:156 */
+.userProfile-container .comments .content-wrap {
+    margin-left: 65px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:159 */
+.userProfile-container .comments .content-wrap .content {
+    margin-bottom: 15px;
+    white-space: normal;
+    clear: both;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:166 */
+.userProfile-container .comments.sub-comments {
+    margin: 0 0 10px 60px;
+    border-bottom: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:170 */
+.userProfile-container .comments.sub-comments .like-comment-btn-wrap {
+    border-bottom: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:176 */
+.userProfile-container .like-comment-btn-wrap {
+    text-align: right;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:181 */
+.userProfile-container .like-comment-btn-wrap button {
+    margin-left: 15px;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    color: #404040;
+    border: none;
+    cursor: pointer;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:194 */
+.userProfile-container .x-grid-item,
+.userProfile-container .x-grid-item-over {
+    background: #fff;
+    border: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:199 */
+.userProfile-container .x-grid-item:last-child {
+    border-bottom: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:202 */
+.userProfile-container .x-grid-item:last-child .like-comment-btn-wrap {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:207 */
+.userProfile-container .x-grid-item:last-child .comments {
+    margin-bottom: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:212 */
+.userProfile-container .x-grid-cell-inner {
+    padding: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:217 */
+.userProfile-container .timeline-item .line-wrap {
+    position: relative;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:220 */
+.userProfile-container .timeline-item .line-wrap:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    border-right: solid 2px #35baf6;
+    left: 0;
+    top: 70px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:231 */
+.userProfile-container .timeline-item .profile-pic-wrap {
+    width: 100px;
+    float: left;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    padding: 5px 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:240 */
+.userProfile-container .timeline-item .profile-pic-wrap img {
+    height: 46px;
+    width: 46px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:247 */
+.userProfile-container .timeline-item .contents-wrap {
+    margin: 0 0px 15px 110px;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 15px;
+    white-space: normal;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:254 */
+.userProfile-container .timeline-item .contents-wrap:before,
+.userProfile-container .timeline-item .contents-wrap:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:264 */
+.userProfile-container .timeline-item .contents-wrap:before {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #ddd;
+    margin: 15px 0 0 -9px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:271 */
+.userProfile-container .timeline-item .contents-wrap:after {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #fff;
+    margin: 15px 0 0 -8px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:278 */
+.userProfile-container .timeline-item .contents-wrap .shared-by,
+.userProfile-container .timeline-item .contents-wrap .followed-by {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:283 */
+.userProfile-container .timeline-item .contents-wrap .shared-by a,
+.userProfile-container .timeline-item .contents-wrap .followed-by a {
+    color: #35baf6;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:290 */
+.userProfile-container .timeline-item .contents-wrap .shared-img {
+    width: 100%;
+    display: block;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:295 */
+.userProfile-container .timeline-item .contents-wrap .job-meeting a {
+    color: #35baf6;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:304 */
+.userProfile-container .timeline-item .article-comment {
+    border-left: 5px solid #ddd;
+    padding: 10px 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:308 */
+.userProfile-container .timeline-item .article-comment span {
+    margin-right: 10px;
+    color: #eee;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:315 */
+.userProfile-container .timeline-item .followed-by img {
+    height: 32px;
+    width: 32px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 5px;
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:323 */
+.userProfile-container .timeline-item .followed-by .followed-by-inner {
+    margin-left: 40px;
+    padding: 5px 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:331 */
+.profiledescription-social-toolbar {
+    border-top: 1px solid #ddd !important;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:334 */
+@media (max-width: 450px) {
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:336 */
+    .userProfile-container .comments h4,
+    .userProfile-container .comments .from-now {
+        float: none;
+    }
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:340 */
+    .userProfile-container .comments .from-now {
+        margin-bottom: 10px;
+    }
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:343 */
+    .userProfile-container .comments h4 {
+        margin: 0;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:349 */
+@media (max-width: 350px) {
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:350 */
+    .timeline-items-wrap {
+        display: none;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:355 */
+@media (max-width: 420px) {
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:356 */
+    .profiledescription-social-toolbar {
+        display: none !important;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:362 */
+.user-notifications,
+.timeline-items-wrap {
+    padding: 15px;
+    background: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:368 */
+.timeline-epoch {
+    width: 100px;
+    background: #fff;
+    text-align: center;
+    padding: 7px 5px;
+    position: relative;
+    margin-bottom: 15px;
+    color: #35baf6;
+    font-size: 14px;
+    border: solid 3px #35baf6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:383 */
+.timeline-item-last .line-wrap:before {
+    display: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:389 */
+@media (max-width: 320px) {
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:391 */
+    .phone .user-profile-desc {
+        height: 380px !important;
+    }
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:396 */
+    .phone .userProfile-container .icon-padding:before {
+        padding: 16px 8px;
+    }
+    /* c:/webserver/htdocs/admin-dashboard/app/view/profile/UserProfileBase.scss:402 */
+    .phone .userProfile-container .timeline-items-wrap .x-dataview-item .timeline-item:before {
+        height: 540px;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-bright-blue {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-bright-blue .x-inner-el {
+    border-width: 0;
+    border-color: #038dcd;
+    background-color: #03a9f5;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-bright-blue .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-bright-blue .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-bright-blue.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-bright-blue.x-hovered .x-inner-el {
+    border-color: #0278ae;
+    background-color: #0394d7;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-bright-blue.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-bright-blue.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-bright-blue.x-pressing,
+.x-button-bright-blue.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-bright-blue.x-pressing .x-inner-el,
+.x-button-bright-blue.x-pressed .x-inner-el {
+    border-color: #026390;
+    background-color: #027fb9;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-bright-blue.x-pressing .x-icon-el,
+.x-button-bright-blue.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-bright-blue.x-pressing .x-arrow-el,
+.x-button-bright-blue.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-bright-blue.x-focused:after {
+    border-color: #cdeefd;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-round {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1246 */
+.x-big .x-button-round {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-round .x-inner-el {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1260 */
+.x-big .x-button-round .x-inner-el {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1412 */
+.x-button-round:before {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-round.x-focused:after {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+.x-big .x-keyboard-mode .x-button-round.x-focused:after {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-header {
+    color: #999;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-header .x-inner-el {
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-header .x-icon-el {
+    color: #999;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-header .x-arrow-el {
+    color: #999;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-header.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-header.x-hovered .x-inner-el {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-header.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-header.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-header.x-pressing,
+.x-button-header.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-header.x-pressing .x-inner-el,
+.x-button-header.x-pressed .x-inner-el {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-header.x-pressing .x-icon-el,
+.x-button-header.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-header.x-pressing .x-arrow-el,
+.x-button-header.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-header.x-focused:after {
+    border-color: rgba(153, 153, 153, 0.8);
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-blue {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-blue .x-inner-el {
+    border-width: 0;
+    border-color: #126297;
+    background-color: #167abc;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-blue .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-blue .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-blue.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-blue.x-hovered .x-inner-el {
+    border-color: #0f517c;
+    background-color: #1368a1;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-blue.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-blue.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-blue.x-pressing,
+.x-button-blue.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-blue.x-pressing .x-inner-el,
+.x-button-blue.x-pressed .x-inner-el {
+    border-color: #0b3f61;
+    background-color: #105685;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-blue.x-pressing .x-icon-el,
+.x-button-blue.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-blue.x-pressing .x-arrow-el,
+.x-button-blue.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-blue.x-focused:after {
+    border-color: #d0e4f2;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-facebook {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-facebook .x-inner-el {
+    border-color: #136ba5;
+    background-color: #167abc;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-facebook .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-facebook .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-facebook.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-facebook.x-hovered .x-inner-el {
+    border-color: #0f517c;
+    background-color: #1368a1;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-facebook.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-facebook.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-facebook.x-pressing,
+.x-button-facebook.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-facebook.x-pressing .x-inner-el,
+.x-button-facebook.x-pressed .x-inner-el {
+    border-color: #0b3f61;
+    background-color: #105685;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-facebook.x-pressing .x-icon-el,
+.x-button-facebook.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-facebook.x-pressing .x-arrow-el,
+.x-button-facebook.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-facebook.x-focused:after {
+    border-color: #d0e4f2;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-gray-button {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-gray-button .x-inner-el {
+    border-width: 0;
+    border-color: #939393;
+    background-color: #a7a7a7;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-gray-button .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-gray-button .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-gray-button.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-gray-button.x-hovered .x-inner-el {
+    border-color: #838383;
+    background-color: #989898;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-gray-button.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-gray-button.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-gray-button.x-pressing,
+.x-button-gray-button.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-gray-button.x-pressing .x-inner-el,
+.x-button-gray-button.x-pressed .x-inner-el {
+    border-color: #747474;
+    background-color: #888;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-gray-button.x-pressing .x-icon-el,
+.x-button-gray-button.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-gray-button.x-pressing .x-arrow-el,
+.x-button-gray-button.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-gray-button.x-focused:after {
+    border-color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-soft-blue {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-soft-blue .x-inner-el {
+    border-color: #16a3f4;
+    background-color: #2eadf5;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-soft-blue .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-soft-blue .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-soft-blue.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-soft-blue.x-hovered .x-inner-el {
+    border-color: #0a89d2;
+    background-color: #11a2f4;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-soft-blue.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-soft-blue.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-soft-blue.x-pressing,
+.x-button-soft-blue.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-soft-blue.x-pressing .x-inner-el,
+.x-button-soft-blue.x-pressed .x-inner-el {
+    border-color: #0976b4;
+    background-color: #0a90db;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-soft-blue.x-pressing .x-icon-el,
+.x-button-soft-blue.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-soft-blue.x-pressing .x-arrow-el,
+.x-button-soft-blue.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-soft-blue.x-focused:after {
+    border-color: #d5effd;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-soft-cyan {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-soft-cyan .x-inner-el {
+    border-color: #039fbc;
+    background-color: #03b4d5;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-soft-cyan .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-soft-cyan .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-soft-cyan.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-soft-cyan.x-hovered .x-inner-el {
+    border-color: #02788f;
+    background-color: #039ab7;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-soft-cyan.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-soft-cyan.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-soft-cyan.x-pressing,
+.x-button-soft-cyan.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-soft-cyan.x-pressing .x-inner-el,
+.x-button-soft-cyan.x-pressed .x-inner-el {
+    border-color: #025f70;
+    background-color: #028199;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-soft-cyan.x-pressing .x-icon-el,
+.x-button-soft-cyan.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-soft-cyan.x-pressing .x-arrow-el,
+.x-button-soft-cyan.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-soft-cyan.x-focused:after {
+    border-color: #cdf0f7;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-soft-green {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-soft-green .x-inner-el {
+    border-color: #90c258;
+    background-color: #9cc96b;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-soft-green .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-soft-green .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-soft-green.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-soft-green.x-hovered .x-inner-el {
+    border-color: #79ad3f;
+    background-color: #8dc155;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-soft-green.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-soft-green.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-soft-green.x-pressing,
+.x-button-soft-green.x-pressed {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-soft-green.x-pressing .x-inner-el,
+.x-button-soft-green.x-pressed .x-inner-el {
+    border-color: #699737;
+    background-color: #7eb542;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-soft-green.x-pressing .x-icon-el,
+.x-button-soft-green.x-pressed .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-soft-green.x-pressing .x-arrow-el,
+.x-button-soft-green.x-pressed .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-soft-green.x-focused:after {
+    border-color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-soft-purple {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-soft-purple .x-inner-el {
+    border-color: #82547c;
+    background-color: #925e8b;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-soft-purple .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-soft-purple .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-soft-purple.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-soft-purple.x-hovered .x-inner-el {
+    border-color: #674262;
+    background-color: #7f5279;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-soft-purple.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-soft-purple.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-soft-purple.x-pressing,
+.x-button-soft-purple.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-soft-purple.x-pressing .x-inner-el,
+.x-button-soft-purple.x-pressed .x-inner-el {
+    border-color: #543650;
+    background-color: #6d4668;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-soft-purple.x-pressing .x-icon-el,
+.x-button-soft-purple.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-soft-purple.x-pressing .x-arrow-el,
+.x-button-soft-purple.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-soft-purple.x-focused:after {
+    border-color: #e9dfe8;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-soft-red {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-soft-red .x-inner-el {
+    border-color: #e13345;
+    background-color: #e44959;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-soft-red .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-soft-red .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-soft-red.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-soft-red.x-hovered .x-inner-el {
+    border-color: #c81e2f;
+    background-color: #e02e41;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-soft-red.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-soft-red.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-soft-red.x-pressing,
+.x-button-soft-red.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-soft-red.x-pressing .x-inner-el,
+.x-button-soft-red.x-pressed .x-inner-el {
+    border-color: #ad1a29;
+    background-color: #d11f31;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-soft-red.x-pressing .x-icon-el,
+.x-button-soft-red.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-soft-red.x-pressing .x-arrow-el,
+.x-button-soft-red.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-soft-red.x-focused:after {
+    border-color: #fadbde;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:151 */
+.x-big .x-button-header .x-icon-el {
+    font-size: 18px;
+    font-weight: normal;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:158 */
+a {
+    color: #35baf6;
+    text-decoration: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:163 */
+.main-container {
+    background-color: #f6f6f6;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:167 */
+.x-treelist-nav {
+    transition: width 0.3s;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:171 */
+.main-nav-container,
+.main-logo {
+    position: relative;
+    transition: width 0.3s;
+    width: 260px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:177 */
+.main-nav-collapsed {
+    width: 64px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:181 */
+.main-toolbar {
+    z-index: 1;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:184 */
+.main-toolbar > .x-body-el {
+    padding: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:189 */
+.main-logo,
+.main-toolbar {
+    height: 65px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:192 */
+.phone .main-logo,
+.phone .main-toolbar {
+    height: 56px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:197 */
+.x-big .main-toolbar,
+.main-toolbar {
+    border: none;
+    padding: 0 38px 0 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:202 */
+.main-nav-floated {
+    background-color: #32404e;
+    transition: left 0.3s;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:211 */
+.main-nav-slid-out {
+    left: -260px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:219 */
+.small-image {
+    width: 35px;
+    height: 35px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:225 */
+.phone .main-toolbar {
+    padding-right: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:229 */
+.phone .main-user-name {
+    display: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:233 */
+.phone .main-logo {
+    line-height: 56px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:236 */
+.phone .main-logo:before {
+    top: 15px;
+    background-size: 85%;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:244 */
+.main-nav-mask > .x-mask-inner {
+    display: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:248 */
+.main-logo {
+    background-color: #35baf6;
+    height: 65px;
+    line-height: 65px;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 64px;
+    position: relative;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/main/Main.scss:258 */
+.main-logo:before {
+    content: " ";
+    position: absolute;
+    background-size: cover;
+    top: 19.5px;
+    left: 22px;
+    width: 17px;
+    height: 26px;
+    background: transparent url(images/company-logo.png) no-repeat center center;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:1 */
+.x-selected > .inbox-item {
+    background-color: #ffefbb;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:5 */
+.inbox-item {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    overflow: auto;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:12 */
+.inbox-inner-row:after {
+    content: " ";
+    clear: both;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:17 */
+.inbox-from,
+.inbox-summary {
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:22 */
+.inbox-date,
+.inbox-favorite {
+    float: right;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:27 */
+.inbox-favorite-icon {
+    color: #facc6e;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:31 */
+.inbox-attachment {
+    padding-right: 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:35 */
+.inbox-summary {
+    width: calc(100vw - 6em);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:42 */
+.email-controls {
+    width: 30%;
+    min-width: 180px;
+    max-width: 240px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:48 */
+.email-controls-box {
+    margin: 0 20px 20px 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:54 */
+.email-friend {
+    overflow: auto;
+    padding: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:59 */
+.email-friend:after {
+    content: " ";
+    clear: both;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:64 */
+.email-friend-name {
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:68 */
+.email-friend-status {
+    float: right;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:72 */
+.online > .email-friend-status {
+    color: green;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/email/Email.scss:76 */
+.offline > .email-friend-status {
+    color: #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:1 */
+.search-user-item {
+    overflow: hidden;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:7 */
+.search-user-title {
+    font-weight: 600;
+    line-height: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:11 */
+.search-user-email {
+    margin-bottom: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:15 */
+.search-user-image {
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:18 */
+.search-user-image > img {
+    border: 2px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:23 */
+.search-user-content {
+    margin-left: 70px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/phone/search/Users.scss:26 */
+.search-user-content:after {
+    content: " ";
+    clear: both;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-launch {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-launch .x-inner-el {
+    border-width: 0;
+    border-color: #ebebeb;
+    background-color: #fff;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1267 */
+.x-button-launch.x-has-text .x-inner-el {
+    padding: 14px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1271 */
+.x-big .x-button-launch.x-has-text .x-inner-el {
+    padding: 14px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-launch .x-icon-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-launch .x-arrow-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-launch.x-hovered {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-launch.x-hovered .x-inner-el {
+    border-color: #dbdbdb;
+    background-color: #f0f0f0;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-launch.x-hovered .x-icon-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-launch.x-hovered .x-arrow-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-launch.x-pressing,
+.x-button-launch.x-pressed {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-launch.x-pressing .x-inner-el,
+.x-button-launch.x-pressed .x-inner-el {
+    border-color: #ccc;
+    background-color: #e0e0e0;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-launch.x-pressing .x-icon-el,
+.x-button-launch.x-pressed .x-icon-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-launch.x-pressing .x-arrow-el,
+.x-button-launch.x-pressed .x-arrow-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-launch.x-focused:after {
+    border-color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:9 */
+.x-button-launch .x-inner-el:after {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 80%;
+    position: absolute;
+    right: 12px;
+    vertical-align: middle;
+    color: silver;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-presence {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-presence .x-inner-el {
+    border-width: 0;
+    border-color: #ebebeb;
+    background-color: #fff;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1267 */
+.x-button-presence.x-has-text .x-inner-el {
+    padding: 14px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1271 */
+.x-big .x-button-presence.x-has-text .x-inner-el {
+    padding: 14px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-presence .x-icon-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-presence .x-arrow-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-presence.x-hovered {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-presence.x-hovered .x-inner-el {
+    border-color: #dbdbdb;
+    background-color: #f0f0f0;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-presence.x-hovered .x-icon-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-presence.x-hovered .x-arrow-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-presence.x-pressing,
+.x-button-presence.x-pressed {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-presence.x-pressing .x-inner-el,
+.x-button-presence.x-pressed .x-inner-el {
+    border-color: #ccc;
+    background-color: #e0e0e0;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-presence.x-pressing .x-icon-el,
+.x-button-presence.x-pressed .x-icon-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-presence.x-pressing .x-arrow-el,
+.x-button-presence.x-pressed .x-arrow-el {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-presence.x-focused:after {
+    border-color: #35baf6;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:27 */
+.x-button-presence:after {
+    content: "\f111";
+    font-family: FontAwesome;
+    font-size: 80%;
+    position: absolute;
+    right: 12px;
+    color: silver;
+    top: 50%;
+    margin-top: -8px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:38 */
+.x-button-presence.online:after {
+    color: green;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:43 */
+.inbox-unread .inbox-from,
+.inbox-unread .inbox-title {
+    font-weight: 600;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:48 */
+.inbox-favorite-icon .x-gridcolumn-title-wrap-el {
+    padding: 8px 4px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:51 */
+.inbox-favorite-icon .x-text-el {
+    text-overflow: clip;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:56 */
+.email-toolbox {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/tablet/email/Email.scss:62 */
+.friends-list .x-button {
+    display: block;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/authentication/AuthBase.scss:1 */
+.auth-locked-body-el {
+    background-image: url('images/lock-screen-background.jpg');
+    background-size: cover;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/authentication/AuthBase.scss:5 */
+.auth-locked-body-el .x-panel-body-el.auth-locked-body-el {
+    background-color: transparent;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/authentication/LockScreen.scss:1 */
+.lockscreen-header {
+    background-color: #35baf6;
+    color: white;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/authentication/LockScreen.scss:6 */
+.lockscreen-header .x-paneltitle .x-icon-el {
+    background-size: cover;
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:3 */
+.dashboard > .x-body-el {
+    padding: 20px 0 0 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:7 */
+.dashboard-item {
+    margin: 0 20px 20px 0;
+    float: left;
+    width: calc(100% - 20px);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:12 */
+.dashboard-item.last-in-row {
+    margin-right: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:17 */
+.small-100 {
+    width: calc(100% - 20px);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:21 */
+.small-60 {
+    width: calc(60% - 20px);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:25 */
+.small-50 {
+    width: calc(50% - 20px);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:29 */
+.small-40 {
+    width: calc(40% - 20px);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:33 */
+.small-20 {
+    width: calc(20% - 20px);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:37 */
+@media (min-width: 1000px) {
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:38 */
+    .big-100 {
+        width: calc(100% - 20px);
+    }
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:42 */
+    .big-60 {
+        width: calc(60% - 20px);
+    }
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:46 */
+    .big-50 {
+        width: calc(50% - 20px);
+    }
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:50 */
+    .big-40 {
+        width: calc(40% - 20px);
+    }
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:54 */
+    .big-33 {
+        width: calc(33.3% - 20px);
+    }
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:58 */
+    .big-20 {
+        width: calc(20% - 20px);
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:64 */
+.x-tool-type-wrench {
+    font-family: FontAwesome;
+    line-height: 1;
+    background: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:136 */
+.x-tool-type-wrench:before {
+    content: "\f0ad";
+    font-feature-settings: 'liga';
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:70 */
+.quick-graph-panel .x-panel-header {
+    padding-left: 1.375em;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:74 */
+.quick-graph-panel .x-panel-title-icon {
+    position: relative;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:77 */
+.quick-graph-panel .x-panel-title-icon:before {
+    position: absolute;
+    height: 1.875em;
+    width: 1.875em;
+    top: -0.4375em;
+    left: -0.4375em;
+    border-radius: 1.875em;
+    background-color: #f1f1f1;
+    line-height: 1.875em;
+    text-align: center;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Dashboard.scss:90 */
+.quick-graph-panel .x-panel-title-text {
+    padding-left: 0.53em;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:208 */
+.x-progress-plain {
+    min-height: 5px;
+    border-width: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:220 */
+.x-big .x-progress-plain {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:230 */
+.x-progress-plain .x-progress-bar {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:233 */
+.x-big .x-progress-plain .x-progress-bar {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:10 */
+.top-info-container {
+    color: #4590d3;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:12 */
+.top-info-container .inner {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:19 */
+.dashboard-graph-analysis-left {
+    border-right: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:23 */
+.graph-analysis-right-inner-container.right-value {
+    text-align: right;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:27 */
+.graph-analysis-right {
+    padding-left: 15px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:31 */
+@media (max-width: 699px) {
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Network.scss:32 */
+    .graph-analysis-right {
+        padding-left: 0;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:1 */
+.services-text {
+    margin: 0 0 10px 5px;
+    max-height: 6.3em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:8 */
+.services-legend {
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.15em;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:13 */
+.phone .services-legend {
+    display: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:17 */
+.services-legend .legend-item {
+    width: 33%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:24 */
+.services-legend .legend-icon {
+    width: 1.15em;
+    height: 1.15em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.4em;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:32 */
+.services-legend .legend-text {
+    font-size: 0.85em;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:37 */
+@media (max-width: 400px) {
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:38 */
+    .services-legend {
+        display: none;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:43 */
+@media (min-width: 401px) {
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:44 */
+    .x-big .services-text {
+        max-height: 5em;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:208 */
+.x-progress-finance {
+    min-height: 5px;
+    border-width: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:220 */
+.x-big .x-progress-finance {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:230 */
+.x-progress-finance .x-progress-bar {
+    min-height: 5px;
+    background-color: #ffc000;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:233 */
+.x-big .x-progress-finance .x-progress-bar {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:208 */
+.x-progress-research {
+    min-height: 5px;
+    border-width: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:220 */
+.x-big .x-progress-research {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:230 */
+.x-progress-research .x-progress-bar {
+    min-height: 5px;
+    background-color: #6aa5db;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:233 */
+.x-big .x-progress-research .x-progress-bar {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:208 */
+.x-progress-marketing {
+    min-height: 5px;
+    border-width: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:220 */
+.x-big .x-progress-marketing {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:230 */
+.x-progress-marketing .x-progress-bar {
+    min-height: 5px;
+    background-color: #ee929c;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Progress.scss:233 */
+.x-big .x-progress-marketing .x-progress-bar {
+    min-height: 5px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:76 */
+.legend-finance {
+    background-color: #ffc000;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:79 */
+.legend-research {
+    background-color: #6aa5db;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:83 */
+.legend-marketing {
+    background-color: #ee929c;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:87 */
+.left-aligned-div {
+    float: left;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:91 */
+.right-aligned-div {
+    float: right;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:95 */
+.bottom-indent {
+    margin-bottom: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/dashboard/Services.scss:99 */
+.service-marketing {
+    margin-bottom: 8px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:1 */
+.faq-item {
+    margin: 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:5 */
+.faq-title {
+    display: table;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:9 */
+.faq-expander,
+.faq-question {
+    display: table-cell;
+    font-size: 110%;
+    cursor: pointer;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:16 */
+.faq-expander {
+    width: 1.8em;
+    text-align: center;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:20 */
+.faq-expander:before {
+    content: "\f0da";
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:25 */
+.faq-expanded .faq-expander:before {
+    content: "\f0d7";
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:31 */
+.faq-question {
+    font-weight: 600;
+    line-height: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:35 */
+.faq-body {
+    height: 0;
+    overflow: hidden;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:36 */
+.faq-body > div {
+    padding: 6px 0 10px 10px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/faq/Items.scss:43 */
+.faq-expanded .faq-body {
+    height: auto;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Finish.scss:1 */
+.finish-form {
+    color: red;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Finish.scss:5 */
+.finish-form-icon,
+.finish-form-title,
+.finish-form-text {
+    color: #888;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Finish.scss:11 */
+.finish-form-icon {
+    float: left;
+    font-size: 8em;
+    width: 1.1em;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Finish.scss:16 */
+.finish-form-icon:before {
+    content: "\f05d";
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Finish.scss:21 */
+.finish-form-title {
+    margin-top: 20px;
+    font-size: 200%;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Finish.scss:26 */
+.finish-form-text {
+    margin-top: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-button-wizard {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-button-wizard .x-inner-el {
+    border-color: #3589d4;
+    background-color: #579ddb;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-button-wizard .x-icon-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-button-wizard .x-arrow-el {
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1394 */
+.x-button-wizard.x-hovered {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1398 */
+.x-button-wizard.x-hovered .x-inner-el {
+    border-color: #297ac1;
+    background-color: #3e8ed6;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1403 */
+.x-button-wizard.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1407 */
+.x-button-wizard.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1422 */
+.x-button-wizard.x-pressing,
+.x-button-wizard.x-pressed {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1425 */
+.x-button-wizard.x-pressing .x-inner-el,
+.x-button-wizard.x-pressed .x-inner-el {
+    border-color: #246aa8;
+    background-color: #2b7fca;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1430 */
+.x-button-wizard.x-pressing .x-icon-el,
+.x-button-wizard.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1434 */
+.x-button-wizard.x-pressing .x-arrow-el,
+.x-button-wizard.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1458 */
+.x-keyboard-mode .x-button-wizard.x-focused:after {
+    border-color: #ddebf8;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1239 */
+.x-tab-wizard {
+    color: #888;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1253 */
+.x-tab-wizard .x-inner-el {
+    background-color: #fff;
+    background-image: none;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1277 */
+.x-tab-wizard .x-icon-el {
+    color: #888;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Button.scss:1327 */
+.x-tab-wizard .x-arrow-el {
+    color: #888;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1434 */
+.x-tab-wizard.x-active {
+    color: #579ddb;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:330 */
+.x-tabbar-wizard {
+    background-color: #fff;
+    background-image: none;
+    border-color: grey;
+}
+/* c:/webserver/htdocs/admin-dashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:344 */
+.x-tabbar-wizard .x-title {
+    color: #606060;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Wizard.scss:14 */
+.wizard .x-formpanel-body-el {
+    background-color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Wizard.scss:19 */
+@media (max-width: 400px) {
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Wizard.scss:21 */
+    .wizard .x-tab-icon {
+        margin: 0;
+    }
+    /* c:/webserver/htdocs/admin-dashboard/modern/src/view/forms/Wizard.scss:24 */
+    .wizard .x-tab .x-text-el {
+        display: none;
+    }
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/BlankPage.scss:1 */
+.blank-page-container {
+    text-align: center;
+    color: #cacaca;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/BlankPage.scss:5 */
+.blank-page-container .fa-outer-class {
+    margin: auto;
+    background-color: #ebebeb;
+    width: 10rem;
+    border-radius: 5rem;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/BlankPage.scss:11 */
+.blank-page-container .fa-outer-class .x-fa:before {
+    line-height: 10rem;
+    font-size: 12rem;
+    color: #cacaca;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/BlankPage.scss:18 */
+.blank-page-container h1 {
+    margin: 0.75rem;
+    font-size: 2.5rem;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/BlankPage.scss:23 */
+.blank-page-container .blank-page-text {
+    font-size: 1.5rem;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/ErrorBase.scss:1 */
+.error-page-container {
+    background-image: url('images/error-page-background.jpg');
+    background-size: cover;
+    color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/ErrorBase.scss:7 */
+.error-page-top-text {
+    font-size: 10rem;
+    line-height: 10rem;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/pages/ErrorBase.scss:11 */
+.error-page-desc {
+    text-align: center;
+    font-size: 1.3rem;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/profile/UserProfile.scss:2 */
+.userProfile-container .userProfilePic {
+    border: 4px solid #ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/profile/UserProfile.scss:7 */
+.userProfile-container .userProfileName {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #404040;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/profile/UserProfile.scss:14 */
+.userProfile-container .userProfileDesc {
+    color: #404040;
+    line-height: 16px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/profile/UserProfile.scss:21 */
+.userProfile-container .user-profile-desc .x-layout-box-item:before {
+    top: 0px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/profile/UserProfile.scss:26 */
+.userProfile-container .user-profile-desc .box {
+    display: flex;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:1 */
+.search-all {
+    background-color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:4 */
+.search-all .search-result-item {
+    padding: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:7 */
+.search-all .search-result-item .x-innerhtml {
+    padding: 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:13 */
+.search-all .search-result-item-selected .search-result-item {
+    background-color: #f2e3b2;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:18 */
+.search-all img {
+    margin: 10px 10px 0 0;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:22 */
+.search-all .list-cls {
+    font-weight: 600;
+    line-height: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:26 */
+.search-all a {
+    text-decoration: none;
+    color: #35baf6;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:36 */
+.search-all .x-list-item .x-innerhtml {
+    font-size: 14px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/search/All.scss:41 */
+.search-all .x-dataview-body-el {
+    width: 100% !important;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/BioTile.scss:3 */
+.bio-tile {
+    background-color: #fff;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/BioTile.scss:7 */
+.bio-banner {
+    background-color: #607d8b;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/BioTile.scss:11 */
+.bio-banner,
+.bio-image {
+    background-position: top left !important;
+    background-size: 100% auto !important;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/BioTile.scss:17 */
+.bio-image {
+    width: 66px;
+    height: 66px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-left: -33px;
+    margin-top: -33px;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/BioTile.scss:26 */
+.bio-description {
+    padding-top: 41px;
+    text-align: center;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/BioTile.scss:30 */
+.bio-description > .x-innerhtml::first-line {
+    font-weight: 600;
+    font-size: 130%;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/SocialStatus.scss:1 */
+.social-status-header,
+.social-status-count {
+    text-align: center;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/SocialStatus.scss:6 */
+.social-status-category:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:1 */
+.status-tile {
+    background-color: #fff;
+    border: 3px solid transparent;
+    position: relative;
+    text-align: center;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:8 */
+.status-tile-wrap {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:13 */
+.status-tile-large > .status-tile-wrap {
+    font-size: 150%;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:18 */
+.status-tile-quantity {
+    font-size: 250%;
+    font-weight: 500;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:23 */
+.status-tile-icon-wrap {
+    font-size: 180%;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:27 */
+.status-tile-icon-wrap,
+.status-tile-icon {
+    display: inline-block;
+}
+/* c:/webserver/htdocs/admin-dashboard/modern/src/view/widgets/StatusTile.scss:32 */
+.status-tile-icon-first .status-tile-icon-wrap {
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.4em;
+    color: #fff;
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/main/Main.scss:1 */
+.nav-tree-badge:after {
+    position: absolute;
+    height: 18px;
+    width: 3.3em;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    margin-top: -9px;
+    right: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/main/Main.scss:16 */
+.nav-tree-badge-hot:after {
+    content: "HOT";
+    background-color: #e3495a;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/main/Main.scss:21 */
+.nav-tree-badge-new:after {
+    content: "NEW";
+    background-color: #2eadf5;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/main/Main.scss:26 */
+.pop-out {
+    -webkit-box-shadow: 2px 2px 8px 2px #ccc;
+    -moz-box-shadow: 2px 2px 8px 2px #ccc;
+    box-shadow: 2px 2px 8px 2px #ccc;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/main/Main.scss:30 */
+.circular {
+    border-radius: 50%;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/main/Main.scss:35 */
+.x-fa.fa-google-plus {
+    min-width: 16px;
+    width: auto;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/Application.scss:3 */
+body.x-ios.x-webview.x-portrait {
+    margin-top: 20px;
+}
+/* c:/webserver/htdocs/admin-dashboard/sass/src/view/search/Results.scss:1 */
+.search-result-attachment {
+    width: 160px;
+    height: 100px;
+}
