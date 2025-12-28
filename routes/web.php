@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\PayrollController;
 use App\Http\Controllers\Admin\QrCodeController;
 use App\Http\Controllers\Admin\QualificationController;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Admin\SyncDataController;
 use App\Http\Controllers\Admin\TransportationTypeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserStatusController;
@@ -69,6 +70,25 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('index', [DashboardController::class, 'index'])->name('index');
             });
 
+            // Sync Data Routes
+            Route::prefix('sync-data')->name('sync-data.')->group(function () {
+
+                // Trang chính
+                Route::get('/', [SyncDataController::class, 'index'])
+                    ->name('index');
+
+                // Import file Excel (sync nhiều tables)
+                Route::post('/import', [SyncDataController::class, 'import'])
+                    ->name('import');
+
+                // Sync manual (sync từng table) - NEW
+                Route::post('/sync-manual', [SyncDataController::class, 'syncManual'])
+                    ->name('sync-manual');
+
+                // Tải template Excel
+                Route::get('/download-template', [SyncDataController::class, 'downloadTemplate'])
+                    ->name('download-template');
+            });
 
 //        Route::prefix('user')->name('user.')->group(function () {
 //            Route::get('index', [UserController::class, 'index'])->name('index');
