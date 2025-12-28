@@ -46,6 +46,10 @@ License: For each use you must have a valid license purchased only from above li
     <link href="{{  asset('css/custom-admin.css') }}" rel="stylesheet" type="text/css" />
     <script src="{{  asset('assets/plugins/extjs/ext/ext-all.js') }}"></script>
 
+    <!-- SweetAlert2 -->
+    <link href="{{  asset('assets/plugins/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{  asset('assets/plugins/sweetalert2.min.js') }}"></script>
+
     <script>
 
         const screenWidth = window.screen.width;
