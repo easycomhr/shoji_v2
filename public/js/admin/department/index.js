@@ -2,6 +2,7 @@ Ext.onReady(function(){
 
     var s_name;
     var s_code;
+    var mainGird;
 
     Ext.define('Department', {
         extend : 'Ext.data.Model',
@@ -33,10 +34,16 @@ Ext.onReady(function(){
         listeners:{
             beforeload : function(){
                 $.loadingStart();
-                s_name = Ext.util.Format.trim(mainGird.down("#s_name").getValue());
-                s_code = Ext.util.Format.trim(mainGird.down("#s_code").getValue());
-                mainStore.proxy.extraParams.name = s_name;
-                mainStore.proxy.extraParams.code = s_code;
+                if (mainGird && mainGird.rendered) {
+                    s_name = Ext.util.Format.trim(mainGird.down("#s_name").getValue() || '');
+                    s_code = Ext.util.Format.trim(mainGird.down("#s_code").getValue() || '');
+                } else {
+                    s_name = '';
+                    s_code = '';
+                }
+
+                mainStore.getProxy().extraParams.name = s_name;
+                mainStore.getProxy().extraParams.code = s_code;
 
             },load: function () {
                 $.loadingEnd();
@@ -54,11 +61,15 @@ Ext.onReady(function(){
 
     });
 
-    var mainGird = Ext.create('Ext.grid.Panel', {
+    mainGird = Ext.create('Ext.grid.Panel', {
         renderTo: "main-gird",
         store : mainStore,
         title : lblPageTitle,
         listeners : {
+            afterrender: function() {
+                console.log("mainGird rendered");
+                mainStore.load();
+            },
             itemkeydown: function(view, record, item, index, key) {
                 if (key.getKey() === SYSTEM_CONSTANT.DELETE_KEY) {
                     var selection = mainGird.getView().getSelectionModel().getSelection()[0];
@@ -292,9 +303,10 @@ Ext.onReady(function(){
                     {
                         text: HRMS_LABELS.lblSave,
                         handler: function () {
+                            var modal = this.up('window');
                             var form = this.up('window').down('form');
                             var formData = form.getValues();
-                            saveData(formData, form);
+                            saveData(formData, form, modal);
                          //   form.reset(); // Optionally reset the form after saving
                         }
                     },
@@ -318,7 +330,7 @@ Ext.onReady(function(){
         modalEdit.show();
     }
 
-    function saveData(formData, form) {
+    function saveData(formData, form, modal) {
         var conn = new Ext.data.Connection();
         conn.request({
             url : URL_STORE,
@@ -334,9 +346,10 @@ Ext.onReady(function(){
                     mainGird.getView().scrollTo(0,0);
 
                     if(parseInt(result.is_continue) === 0){
-                        modalEdit.hide();
+                        modal.close();  // Đóng và destroy
+                    } else {
+                        form.reset();   // ← Chỉ reset khi tiếp tục thêm
                     }
-                    form.reset();
                 }else{
                     $.showMessage('error', result.message);
                 }

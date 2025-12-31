@@ -33,7 +33,7 @@ Ext.onReady(function(){
                 totalProperty: 'results'
             }
         },
-        autoLoad: true,
+        autoLoad: false,
         listeners: {
             load: function(store, records, success) {
                 if (success) {
@@ -174,6 +174,10 @@ Ext.onReady(function(){
         store: mainStore,
         title: lblPageTitle,
         listeners: {
+            afterrender: function() {
+                console.log("mainGird rendered");
+                mainStore.load();
+            },
             itemkeydown: function(view, record, item, index, key) {
                 if (key.getKey() === SYSTEM_CONSTANT.DELETE_KEY) {
                     var selection = mainGird.getView().getSelectionModel().getSelection()[0];

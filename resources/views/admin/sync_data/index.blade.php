@@ -479,6 +479,12 @@
                     // Reset form
                     $('#importForm')[0].reset();
 
+                    var fileInput = $('#import_file');
+                    fileInput.val('');  // Clear value
+
+                    // Nếu vẫn còn vấn đề, dùng cách này (clone & replace)
+                    fileInput.replaceWith(fileInput.clone(true));
+
                     // SweetAlert
                     var swalMessage = '';
                     if (failedTables === 0 && successTables > 0) {
