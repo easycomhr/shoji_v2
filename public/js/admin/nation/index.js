@@ -4,16 +4,17 @@ Ext.onReady(function(){
     var s_code;
     var mainGird;
 
-    Ext.define('AllowanceType', {
+
+    Ext.define('Nation', {
         extend : 'Ext.data.Model',
         fields : [
-            'id', 'code', 'name', 'note', 'is_tax', 'is_social_insurance'
+            'id', 'code', 'name', 'short_name', 'area_code'
         ],
 
     });
 
     var mainStore = Ext.create('Ext.data.Store', {
-        model : 'AllowanceType',
+        model : 'Nation',
         pageSize: SYSTEM_CONSTANT.DEFAULT_PAGE_SIZE,
         proxy : {
             timeout : APP.TimeOut,
@@ -211,43 +212,29 @@ Ext.onReady(function(){
             },{
                 header : HRMS_LABELS.lblName,
                 dataIndex : 'name',
-                width: 200,
-                field : {
-                    type : 'textfield'
-                },
-
-            },{
-                header : HRMS_LABELS.lblDescription,
-                dataIndex : 'note',
                 flex: 1,
                 field : {
                     type : 'textfield'
                 },
 
             },{
-                align: "center",
-                header: HRMS_LABELS.lblIsTax,
-                dataIndex: 'is_tax',
-                width: 100,
-                xtype: 'checkcolumn',
-                listeners: {
-                    checkchange: function(column, rowIndex, checked, record) {
-                        var newValue = checked ? 1 : 0;
-                        updateField(record, 'is_tax', newValue);
-                    }
-                }
+                header : HRMS_LABELS.lblShortName,
+                dataIndex : 'short_name',
+                width: 120,
+                align: 'center',
+                field : {
+                    type : 'textfield'
+                },
+
             },{
-                align: "center",
-                header: HRMS_LABELS.lblIsSocialInsurance,
-                dataIndex: 'is_social_insurance',
-                width: 100,
-                xtype: 'checkcolumn',
-                listeners: {
-                    checkchange: function(column, rowIndex, checked, record) {
-                        var newValue = checked ? 1 : 0;
-                        updateField(record, 'is_social_insurance', newValue);
-                    }
-                }
+                align: 'center',
+                header : HRMS_LABELS.lblAreaCode,
+                dataIndex : 'area_code',
+                width: 120,
+                field : {
+                    type : 'textfield'
+                },
+
             },{
                 align: "center",
                 header: HRMS_LABELS.lblAction,
@@ -267,54 +254,21 @@ Ext.onReady(function(){
 
     });
 
-    // Hàm cập nhật field chung có thể tái sử dụng
-    function updateField(record, fieldName, value, successCallback) {
-        var conn = new Ext.data.Connection();
-        conn.request({
-            url: URL_STORE,
-            timeout: APP.TimeOut,
-            params: {
-                _token: _token,
-                id: record.id,
-                field: fieldName,
-                value: value
-            },
-            success: function(resp, opt) {
-                var result = Ext.util.JSON.decode(resp.responseText);
-                if (result.success) {
-                    $.showMessage('success', result.message);
-                    record.commit();
-                    if (successCallback && typeof successCallback === 'function') {
-                        successCallback(result);
-                    }
-                } else {
-                    $.showMessage('error', result.message);
-                    record.reject();
-                }
-            },
-            failure: function() {
-                record.reject();
-                $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
-            }
-        });
-    }
 
+    // Hàm cập nhật field chung có thể tái sử dụng
     function initModalEdit() {
         return Ext.create('Ext.window.Window', {
             title: HRMS_LABELS.lblCreate,
             modal: true,
             width: 500,
             y: 100,
+            closeAction: 'destroy',
             items: [
                 {
                     xtype: 'form',
                     bodyPadding: 10,
                     defaults: {
-                        labelWidth: 100
-
-
-
-                        , // Set label width for all fields
+                        labelWidth: 100 , // Set label width for all fields
                         width: '100%'   // Set input width for all fields
                     },
                     items: [
@@ -340,22 +294,15 @@ Ext.onReady(function(){
                         },
 
                         {
-                            xtype: 'textareafield',
-                            fieldLabel: HRMS_LABELS.lblNote,
-                            name: 'note'
+                            xtype: 'textfield',
+                            fieldLabel: HRMS_LABELS.lblShortName,
+                            name: 'short_name'
+                        },{
+                            xtype: 'textfield',
+                            fieldLabel: HRMS_LABELS.lblAreaCode,
+                            name: 'area_code'
                         },
-                        {
-                            xtype: 'checkboxfield',  // Checkbox field
-                            fieldLabel: HRMS_LABELS.lblIsTax,
-                            name: 'is_tax',
-                            checked: false  // Set to true if you want the checkbox to be initially checked
-                        },
-                        {
-                            xtype: 'checkboxfield',  // Checkbox field
-                            fieldLabel: HRMS_LABELS.lblIsSocialInsurance,
-                            name: 'is_social_insurance',
-                            checked: false  // Set to true if you want the checkbox to be initially checked
-                        },
+
                         {
                             xtype: 'checkboxfield',  // Checkbox field
                             fieldLabel: HRMS_LABELS.lblContinueAdd,
@@ -407,6 +354,7 @@ Ext.onReady(function(){
                 var result = Ext.util.JSON.decode(resp.responseText);
                 if(result.success){
                     $.showMessage('success', result.message);
+
                     mainStore.load();
                     mainGird.getView().scrollTo(0,0);
 
@@ -415,7 +363,6 @@ Ext.onReady(function(){
                     } else {
                         form.reset();   // ← Chỉ reset khi tiếp tục thêm
                     }
-
                 }else{
                     $.showMessage('error', result.message);
                 }
