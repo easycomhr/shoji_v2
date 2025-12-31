@@ -190,7 +190,7 @@
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row" >
                                 <select class="form-select form-select-solid" name="department_id" aria-label="">
-                                    <option>---</option>
+                                    <option value="0">---</option>
                                     @foreach($departments as $department)
                                         <option value="{{ $department->id }}" {{ old('department_id', $employee->department_id ?? '') == $department->id ? 'selected' : '' }}>{{ $department->name ?? '' }}</option>
                                     @endforeach
@@ -209,7 +209,7 @@
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row" >
                                 <select class="form-select form-select-solid" name="position_id" aria-label="">
-                                    <option>---</option>
+                                    <option value="0">---</option>
                                     @foreach($positions as $position)
                                         <option value="{{ $position->id }}" {{ old('position_id', $employee->position_id ?? '') == $position->id ? 'selected' : '' }}>{{ $position->name ?? '' }}</option>
                                     @endforeach
@@ -308,10 +308,26 @@
                                     <!--end::Option-->
                                 </div>
 
+
                             </div>
                             <!--end::Col-->
                         </div>
                         <!--end::Input group-->
+
+                        <div class="row mb-6" >
+                            <!--begin::Label-->
+                            <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{ __("Language") }}</label>
+                            <!--end::Label-->
+
+                            <!--begin::Col-->
+                            <div class="col-lg-8 fv-row" >
+                                <select class="form-select form-select-solid" name="language" aria-label="">
+                                    <option value="vi" {{ ($employee->language ?? 'vi') === 'vi' ? 'selected' : '' }}>VN</option>
+                                    <option value="en" {{ ($employee->language ?? 'en') === 'en' ? 'selected' : '' }}>English</option>
+                                </select>
+                            </div>
+                            <!--end::Col-->
+                        </div>
 
 
                     </div>

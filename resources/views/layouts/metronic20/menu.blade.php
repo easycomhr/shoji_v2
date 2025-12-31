@@ -4,7 +4,17 @@
     @foreach(config('menus.hrms') as $key => $menu)
         @php
 
-            $active_tab = empty($tab) && $key == 0;
+            $currentRouteName = \Illuminate\Support\Facades\Route::currentRouteName();
+            // Lấy parent code từ route hiện tại
+            $currentParentCode = config("menus.route_to_parent")[$currentRouteName] ?? '';
+
+            // Check active: so sánh menu code với parent code từ route
+            $active_tab = ($menu['code'] === $currentParentCode) ? 'active' : '';
+
+            // Fallback: nếu không tìm thấy mapping, active tab đầu tiên
+            if (empty($currentParentCode) && $key == 0) {
+                $active_tab = 'active';
+            }
 
         @endphp
         <div class="tab-pane fade {{ $active_tab ? 'active show' : '' }}" id="kt_header_navs_tab_{{ $menu['code'] }}" >
@@ -18,7 +28,7 @@
                         <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
 
                             @if(!empty($submenu['route_name']))
-                                <a class="menu-link py-1" href="{{ route($submenu['route_name']) }}"   data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                <a class="menu-link py-1 {{ $submenu['route_name'] == \Illuminate\Support\Facades\Route::currentRouteName() ? 'active' : '' }}" href="{{ route($submenu['route_name']) }}"   data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                                                     <span class="menu-icon">
                                                         <i class="ki-duotone ki-abstract-26 fs-2">
                                                             <span class="path1"></span>

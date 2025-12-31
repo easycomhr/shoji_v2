@@ -26,11 +26,20 @@
                     <div class="header-tabs overflow-auto mx-4 ms-lg-10 mb-5 mb-lg-0" id="kt_header_tabs" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_header_navs_wrapper', lg: '#kt_brand_tabs'}">
                         <!--begin::Header tabs-->
                         <ul class="nav flex-nowrap text-nowrap">
-
                             @foreach(config('menus.hrms') as $key => $menu)
 
                                 @php
-                                    $active = empty($tab) && $key == 0 ? 'active' : '';
+                                    $currentRouteName = \Illuminate\Support\Facades\Route::currentRouteName();
+                                    // Lấy parent code từ route hiện tại
+                                    $currentParentCode = config("menus.route_to_parent")[$currentRouteName] ?? '';
+
+                                    // Check active: so sánh menu code với parent code từ route
+                                    $active = ($menu['code'] === $currentParentCode) ? 'active' : '';
+
+                                    // Fallback: nếu không tìm thấy mapping, active tab đầu tiên
+                                    if (empty($currentParentCode) && $key == 0) {
+                                        $active = 'active';
+                                    }
                                 @endphp
 
                                 <li class="nav-item">

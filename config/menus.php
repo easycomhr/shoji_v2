@@ -231,6 +231,37 @@ return [
             ]
         ]
 
-    ]
+    ],
+
+    'route_to_parent' => [
+        // Human Resource routes
+        'admin.user.index' => 'human_resource',
+        'admin.user.terminate' => 'human_resource',
+        'admin.user.import' => 'human_resource',
+        'admin.annual_leave.index' => 'human_resource',
+        'admin.monthly_leave_balance.index' => 'human_resource',
+        'admin.annual_leave.process' => 'human_resource',
+        'admin.leave.index' => 'human_resource',
+        'admin.leave.register' => 'human_resource',
+        'admin.leave.import' => 'human_resource',
+        'admin.calculate_salary.index' => 'human_resource',
+        'admin.payroll.index' => 'human_resource',
+
+        // System Settings routes
+        'admin.company.index' => 'system_settings',
+        'admin.department.index' => 'system_settings',
+        'admin.office.index' => 'system_settings',
+        'admin.skill.index' => 'system_settings',
+        'admin.qualification.index' => 'system_settings',
+        'admin.family_relation.index' => 'system_settings',
+        'admin.education.index' => 'system_settings',
+        'admin.grade.index' => 'system_settings',
+        'admin.user_status.index' => 'system_settings',
+        'admin.transportation_type.index' => 'system_settings',
+        'admin.leave_category.index' => 'system_settings',
+        'admin.leave_type.index' => 'system_settings',
+        'admin.work_shift.index' => 'system_settings',
+        'admin.parameter.index' => 'system_settings',
+    ],
 
 ];
