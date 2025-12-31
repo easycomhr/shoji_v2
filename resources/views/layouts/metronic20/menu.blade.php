@@ -15,16 +15,20 @@
 
                     @foreach($menu['children'] as $submenu)
                         <!--begin:Menu item-->
-                        <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+                        <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                             data-kt-menu-placement="bottom-start"
+                             class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
 
                             @if(!empty($submenu['route_name']))
-                                <a class="menu-link py-1" href="{{ route($submenu['route_name']) }}"   data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                                                    <span class="menu-icon">
-                                                        <i class="ki-duotone ki-abstract-26 fs-2">
-                                                            <span class="path1"></span>
-                                                            <span class="path2"></span>
-                                                        </i>
-                                                    </span>
+                                <a class="menu-link py-1" href="{{ route($submenu['route_name']) }}"
+                                   data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                   data-bs-dismiss="click" data-bs-placement="right">
+                                        <span class="menu-icon">
+                                            <i class="ki-duotone ki-abstract-26 fs-2">
+                                                <span class="path1"></span>
+                                                <span class="path2"></span>
+                                            </i>
+                                        </span>
                                     <span class="menu-title">{{ __($submenu['name'] ?? '') }}</span>
                                 </a>
                             @else

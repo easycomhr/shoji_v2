@@ -206,6 +206,7 @@ return [
                     'display' => true,
                     'children' => [
                         ['code' => 'setting_allowance_type', 'name' => 'Allowance Types', 'route_name' => 'admin.allowance_types.index', 'display' => true],
+                        ['code' => 'setting_nation', 'name' => 'Nations', 'route_name' => 'admin.nation.index', 'display' => true],
                         ['code' => 'setting_skill', 'name' => 'Skills', 'route_name' => 'admin.skill.index', 'display' => true],
                         ['code' => 'setting_qualification', 'name' => 'Qualifications', 'route_name' => 'admin.qualification.index', 'display' => true],
                         ['code' => 'setting_family_relationship', 'name' => 'Family Relations', 'route_name' => 'admin.family_relation.index', 'display' => true],
@@ -228,7 +229,8 @@ return [
                         ['code' => 'assign_access', 'name' => 'Assign Access Privileges Report', 'route_name' => null, 'display' => true],
                         ['code' => 'view_log', 'name' => 'View Log', 'route_name' => null, 'display' => true],
                     ]
-                ]
+                ],
+                ['code' => 'sync_data', 'name' => 'Sync Data', 'route_name' => 'admin.sync-data.index', 'display' => true],
             ]
         ]
 

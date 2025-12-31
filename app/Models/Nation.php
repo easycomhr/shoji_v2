@@ -14,6 +14,10 @@ class Nation extends Model
         'company_id',
         'code',
         'name',
+        'short_name',
+        'area_code',
+        'created_user',
+        'updated_user',
     ];
 
 
