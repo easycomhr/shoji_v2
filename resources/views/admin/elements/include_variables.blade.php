@@ -212,6 +212,9 @@ $company_id = $authUser->company_id ?? null;
         lblCalculateSalary: "{{ __('Calculate salary') }}",
         lblSelectSalaryPeriod: "{{ __('Select Salary Period') }}",
         lblStandardWorkingDay: "{{ __('Standard Working Day') }}",
+        lblCreate: "{{ __('Create') }}",
+        lblIsTax: "{{ __('Is Tax') }}",
+        lblIsSocialInsurance: "{{ __('Is Social Insurance') }}",
     };
 
     var SYSTEM_CONSTANT = {

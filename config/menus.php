@@ -205,6 +205,7 @@ return [
                     'route_name' => null,
                     'display' => true,
                     'children' => [
+                        ['code' => 'setting_allowance_type', 'name' => 'Allowance Types', 'route_name' => 'admin.allowance_types.index', 'display' => true],
                         ['code' => 'setting_skill', 'name' => 'Skills', 'route_name' => 'admin.skill.index', 'display' => true],
                         ['code' => 'setting_qualification', 'name' => 'Qualifications', 'route_name' => 'admin.qualification.index', 'display' => true],
                         ['code' => 'setting_family_relationship', 'name' => 'Family Relations', 'route_name' => 'admin.family_relation.index', 'display' => true],
