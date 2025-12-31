@@ -42,7 +42,7 @@ class AuthController extends Controller
             $authRole = $authUser->role ?? null;
             if(!$authUser->is_login){
                 Auth::logout();
-                return redirect()->back()->with(['error' => 'ユーザー名またはパスワードが間違っています！']);
+                return redirect()->back()->with(['error' => __("The username or password is incorrect!")]);
             }
 
             $this->userService->saveLastedLogin();
@@ -52,7 +52,7 @@ class AuthController extends Controller
         }
 
 
-        return redirect()->back()->with(['error' => 'ユーザー名またはパスワードが間違っています！']);
+        return redirect()->back()->with(['error' => __("The username or password is incorrect!")]);
     }
 
 

@@ -1,3 +1,4 @@
+
 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
     <!--begin::Menu item-->
     <div class="menu-item px-3">
@@ -22,7 +23,7 @@
     <!--end::Menu separator-->
     <!--begin::Menu item-->
     <div class="menu-item px-5">
-        <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+        <a href="{{ route('admin.user.profile', ['general', auth()->user()->code]) }}" class="menu-link px-5">{{ __('My Profile') }}</a>
     </div>
     <!--end::Menu item-->
     <!--begin::Menu item-->
