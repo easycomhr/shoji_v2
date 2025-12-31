@@ -2,3 +2,7 @@
 .form-control.form-control-solid, .form-select.form-select-solid  {
     border-color: #ccc !important;
 }
+
+.toast-message{
+    font-size: 15px !important;
+}

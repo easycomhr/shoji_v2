@@ -93,7 +93,6 @@ function loadingEnd(){
 };
 
 $.showMessage = function(type, message){
-
     switch (type) {
         case 'success':
             toastr.success(message, TRANSLATED_LABELS.lblSuccess);

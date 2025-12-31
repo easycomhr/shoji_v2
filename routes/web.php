@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\LeaveTypeController;
 use App\Http\Controllers\Admin\MasterDataController;
 use App\Http\Controllers\Admin\MonthlyLeaveBalanceController;
 use App\Http\Controllers\Admin\MonthlyLeaveController;
+use App\Http\Controllers\Admin\NationController;
 use App\Http\Controllers\Admin\OfficeController;
 use App\Http\Controllers\Admin\ParameterController;
 use App\Http\Controllers\Admin\PayrollController;
@@ -286,6 +287,13 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [AllowanceTypeController::class, 'search'])->name('search');
                 Route::post('/store', [AllowanceTypeController::class, 'store'])->name('store');
                 Route::post('/destroy', [AllowanceTypeController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('nation')->name('nation.')->group(function () {
+                Route::get('/', [NationController::class, 'index'])->name('index');
+                Route::get('/search', [NationController::class, 'search'])->name('search');
+                Route::post('/store', [NationController::class, 'store'])->name('store');
+                Route::post('/destroy', [NationController::class, 'destroy'])->name('destroy');
             });
 
         });
