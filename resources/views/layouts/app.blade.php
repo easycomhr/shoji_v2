@@ -47,8 +47,8 @@ License: For each use you must have a valid license purchased only from above li
     <script src="{{  asset('assets/plugins/extjs/ext/ext-all.js') }}"></script>
 
     <!-- SweetAlert2 -->
-    <link href="{{  asset('assets/plugins/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-    <script src="{{  asset('assets/plugins/sweetalert2.min.js') }}"></script>
+    <link href="{{  asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{  asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 
     <script>
 
