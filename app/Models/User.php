@@ -344,7 +344,6 @@ class User extends Authenticatable
         if ($this->avatar) {
             return asset('storage/' . $this->avatar);
         }
-
         return asset('images/no_avatar.svg');
     }
 

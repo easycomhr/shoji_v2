@@ -43,6 +43,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test-lang', function () {
+    return app()->getLocale();
+});
+
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('home_page');
 
 Route::name('home.')->group(function () {
