@@ -2,6 +2,7 @@ Ext.onReady(function(){
 
     var s_name;
     var s_code;
+    var mainGird;
 
     Ext.define('WorkShift', {
         extend : 'Ext.data.Model',
@@ -37,8 +38,14 @@ Ext.onReady(function(){
         listeners:{
             beforeload : function(){
                 $.loadingStart();
-                s_code = Ext.util.Format.trim(mainGird.down("#s_code").getValue());
-                mainStore.proxy.extraParams.code = s_code;
+
+                if (mainGird && mainGird.rendered) {
+                    s_code = Ext.util.Format.trim(mainGird.down("#s_code").getValue() || '');
+                } else {
+                    s_code = '';
+                }
+
+                mainStore.getProxy().extraParams.code = s_code;
 
             },load: function () {
                 $.loadingEnd();
@@ -104,11 +111,15 @@ Ext.onReady(function(){
 
     });
 
-    var mainGird = Ext.create('Ext.grid.Panel', {
+    mainGird = Ext.create('Ext.grid.Panel', {
         renderTo: "main-gird",
         store : mainStore,
         title : lblPageTitle,
         listeners : {
+            afterrender: function() {
+                console.log("mainGird rendered");
+                mainStore.load();
+            },
             itemkeydown: function(view, record, item, index, key) {
                 if (key.getKey() === SYSTEM_CONSTANT.DELETE_KEY) {
                     var selection = mainGird.getView().getSelectionModel().getSelection()[0];
@@ -466,9 +477,10 @@ Ext.onReady(function(){
                     {
                         text: HRMS_LABELS.lblSave,
                         handler: function () {
+                            var modal = this.up('window');
                             var form = this.up('window').down('form');
                             var formData = form.getValues();
-                            saveData(formData, form);
+                            saveData(formData, form, modal);
                         }
                     },
                     {
@@ -484,18 +496,12 @@ Ext.onReady(function(){
     }
 
 
-    var modalEdit = initModalEdit();
     function onAddClick() {
-        if (!modalEdit) {
-            modalEdit = initModalEdit(); // Khởi tạo nếu chưa tồn tại
-        }
-        if (modalEdit.rendered) {
-            modalEdit.center(); // Căn giữa modal nếu đã render
-        }
+        var modalEdit = initModalEdit();
         modalEdit.show();
     }
 
-    function saveData(formData, form) {
+    function saveData(formData, form, modal) {
         var conn = new Ext.data.Connection();
         conn.request({
             url : URL_STORE,
@@ -507,15 +513,12 @@ Ext.onReady(function(){
                     $.showMessage('success', result.message);
 
                     mainStore.load();
-                    mainGird.getView().scrollTo(0, 0);
+                    mainGird.getView().scrollTo(0,0);
 
-                    // Đóng modal nếu không phải tiếp tục
-                    if (parseInt(result.is_continue) === 0) {
-                        modalEdit.hide();
-                        // Đặt thời gian ngắn để đảm bảo UI không bị xung đột
-                        setTimeout(() => form.reset(), 300);
+                    if(parseInt(result.is_continue) === 0){
+                        modal.close();  // Đóng và destroy
                     } else {
-                        form.reset();
+                        form.reset();   // ← Chỉ reset khi tiếp tục thêm
                     }
                 } else {
                     $.showMessage('error', result.message);

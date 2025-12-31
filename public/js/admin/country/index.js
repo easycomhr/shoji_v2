@@ -305,9 +305,10 @@ Ext.onReady(function(){
                     {
                         text: HRMS_LABELS.lblSave,
                         handler: function () {
+                            var modal = this.up('window');
                             var form = this.up('window').down('form');
                             var formData = form.getValues();
-                            saveData(formData, form);
+                            saveData(formData, form, modal);
                         }
                     },
                     {
@@ -330,7 +331,7 @@ Ext.onReady(function(){
         modalEdit.show();
     }
 
-    function saveData(formData, form) {
+    function saveData(formData, form, modal) {
         var conn = new Ext.data.Connection();
         conn.request({
             url : URL_STORE,
@@ -346,9 +347,10 @@ Ext.onReady(function(){
                     mainGird.getView().scrollTo(0,0);
 
                     if(parseInt(result.is_continue) === 0){
-                        modalEdit.hide();
+                        modal.close();  // Đóng và destroy
+                    } else {
+                        form.reset();   // ← Chỉ reset khi tiếp tục thêm
                     }
-                    form.reset();
                 }else{
                     $.showMessage('error', result.message);
                 }
