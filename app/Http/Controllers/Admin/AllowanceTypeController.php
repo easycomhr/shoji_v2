@@ -3,51 +3,46 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\OfficeRepository;
-use App\Services\BaseService;
-use App\Services\OfficeService;
+use App\Services\AllowanceTypeService;
 use Illuminate\Http\Request;
 
-class OfficeController extends Controller
+class AllowanceTypeController extends Controller
 {
-    protected OfficeService $officeService;
+    protected AllowanceTypeService $allowanceTypeService;
 
-    public function __construct(OfficeService $officeService)
+    public function __construct(AllowanceTypeService $allowanceTypeService)
     {
-        $this->officeService = $officeService;
+        $this->allowanceTypeService = $allowanceTypeService;
     }
 
-    public function index(){
-        $title = "Offices";
-
-        return view('admin.office.index', compact('title'));
+    public function index()
+    {
+        $title = "Allowance Types";
+        return view('admin.allowance_type.index', compact('title'));
     }
 
     public function search(Request $request)
     {
-
-        $response = $this->officeService->search($request);
+        $response = $this->allowanceTypeService->search($request);
 
         return json_encode([
-            "success"   => true,
-            "rows"      => $response['results'] ?? [],
-            "total"     => $response['recordsTotal'] ?? 0,
+            "success" => true,
+            "rows" => $response['results'] ?? [],
+            "total" => $response['recordsTotal'] ?? 0,
         ]);
     }
 
-    function store(Request $request){
+    public function store(Request $request)
+    {
+        $response = $this->allowanceTypeService->store($request);
 
-
-        $response = $this->officeService->store($request);
-        if($response){
-
+        if ($response) {
             return response()->json([
                 'success' => true,
                 'is_continue' => $request->is_continue == "on" ? 1 : 0,
                 'message' => $request->id ? __(config('messages.commons.update_success')) :
                     __(config('messages.commons.create_success')),
             ]);
-
         }
 
         return response()->json([
@@ -57,16 +52,15 @@ class OfficeController extends Controller
         ]);
     }
 
-    function destroy(Request $request){
+    public function destroy(Request $request)
+    {
+        $response = $this->allowanceTypeService->destroy($request);
 
-        $response = $this->officeService->destroy($request);
-        if($response){
-
+        if ($response) {
             return response()->json([
                 'success' => true,
                 'message' => __(config('messages.commons.delete_success')),
             ]);
-
         }
 
         return response()->json([
