@@ -7,7 +7,7 @@ Ext.onReady(function(){
     Ext.define('LeaveType', {
         extend : 'Ext.data.Model',
         fields : [
-            'id', 'leave_category_id', 'code', 'name', 'kind', 'paid_rate', 'note', 'status'
+            'id', 'leave_category_id', 'code', 'name', 'paid_rate', 'note', 'status'
         ],
 
     });
@@ -269,7 +269,7 @@ Ext.onReady(function(){
             },{
                 text : HRMS_LABELS.lblLeaveCategory,
                 dataIndex : 'leave_category_id',
-                width : 250,
+                width : 210,
                 renderer: renderLeaveCategory,
                 editor:{
                     xtype : 'combo',
@@ -280,16 +280,10 @@ Ext.onReady(function(){
                     editable: false // Tùy chọn nếu cần
                 },
             },{
-                header : HRMS_LABELS.lblKind,
-                dataIndex : 'kind',
-                width: 80,
-                field : {
-                    type : 'numberfield'
-                },
-            },{
-                header : HRMS_LABELS.lblPaidRate,
+                align: 'center',
+                header : HRMS_LABELS.lblPaidRate+'(%)',
                 dataIndex : 'paid_rate',
-                width: 100,
+                width: 150,
                 field : {
                     type : 'numberfield'
                 },
@@ -368,12 +362,7 @@ Ext.onReady(function(){
                             emptyText: HRMS_LABELS.lblSelect, // Placeholder nếu không chọn
                         },{
                             xtype: 'numberfield',
-                            fieldLabel: HRMS_LABELS.lblKind + ' (*)',
-                            name: 'kind',
-                            allowBlank: false,
-                        },{
-                            xtype: 'numberfield',
-                            fieldLabel: HRMS_LABELS.lblPaidRate,
+                            fieldLabel: HRMS_LABELS.lblPaidRate+"(%)",
                             name: 'paid_rate',
                             allowBlank: false,
                             decimalPrecision: 2, // Allows up to 2 decimal places
