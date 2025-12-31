@@ -26,16 +26,6 @@ class OfficeController extends Controller
     public function search(Request $request)
     {
 
-        $action = $request->action ?? config('constant.actions.view');
-        $isAllow = BaseService::verifyAction($request, $action);
-
-        if(!$isAllow){
-            return json_encode([
-                'success' => false,
-                'message' => __(config('messages.errors.not_enough_permission'))
-            ]);
-        }
-
         $response = $this->officeService->search($request);
 
         return json_encode([
@@ -47,15 +37,7 @@ class OfficeController extends Controller
 
     function store(Request $request){
 
-        $action = $request->action ?? config('constant.actions.insert');
-        $isAllow = BaseService::verifyAction($request, $action);
 
-        if(!$isAllow){
-            return json_encode([
-                'success' => false,
-                'message' => __(config('constant.messages.errors.not_enough_permission'))
-            ]);
-        }
         $response = $this->officeService->store($request);
         if($response){
 
@@ -77,15 +59,6 @@ class OfficeController extends Controller
 
     function destroy(Request $request){
 
-        $action = $request->action ?? config('constant.actions.insert');
-        $isAllow = BaseService::verifyAction($request, $action);
-
-        if(!$isAllow){
-            return json_encode([
-                'success' => false,
-                'message' => __(config('constant.messages.errors.not_enough_permission'))
-            ]);
-        }
         $response = $this->officeService->destroy($request);
         if($response){
 

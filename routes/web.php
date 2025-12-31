@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AllowanceTypeController;
 use App\Http\Controllers\Admin\AnnualLeaveController;
 use App\Http\Controllers\Admin\CalculateSalaryController;
 use App\Http\Controllers\Admin\CompanyController;
@@ -75,7 +76,7 @@ Route::group(['middleware' => ['auth']], function () {
             });
 
             // Sync Data Routes
-            Route::prefix('sync-data')->name('sync-data.')->group(function () {
+            Route::prefix('sync_data')->name('sync-data.')->group(function () {
 
                 // Trang chính
                 Route::get('/', [SyncDataController::class, 'index'])
@@ -279,6 +280,14 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/index', [CalculateSalaryController::class, 'index'])->name('index');
                 Route::post('/process', [CalculateSalaryController::class, 'process'])->name('process');
             });
+
+            Route::prefix('allowance_types')->name('allowance_types.')->group(function () {
+                Route::get('/', [AllowanceTypeController::class, 'index'])->name('index');
+                Route::get('/search', [AllowanceTypeController::class, 'search'])->name('search');
+                Route::post('/store', [AllowanceTypeController::class, 'store'])->name('store');
+                Route::post('/destroy', [AllowanceTypeController::class, 'destroy'])->name('destroy');
+            });
+
         });
 
 
