@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AllowanceTypeController;
 use App\Http\Controllers\Admin\AnnualLeaveController;
 use App\Http\Controllers\Admin\CalculateSalaryController;
 use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\ContractTypeController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
@@ -14,7 +15,9 @@ use App\Http\Controllers\Admin\FileController;
 use App\Http\Controllers\Admin\GradeController;
 use App\Http\Controllers\Admin\LeaveCategoryController;
 use App\Http\Controllers\Admin\LeaveController;
+use App\Http\Controllers\Admin\LeaveGroupController;
 use App\Http\Controllers\Admin\LeaveTypeController;
+use App\Http\Controllers\Admin\LevelController;
 use App\Http\Controllers\Admin\MasterDataController;
 use App\Http\Controllers\Admin\MonthlyLeaveBalanceController;
 use App\Http\Controllers\Admin\MonthlyLeaveController;
@@ -294,6 +297,27 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [NationController::class, 'search'])->name('search');
                 Route::post('/store', [NationController::class, 'store'])->name('store');
                 Route::post('/destroy', [NationController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('contract_types')->name('contract_types.')->group(function () {
+                Route::get('/', [ContractTypeController::class, 'index'])->name('index');
+                Route::get('/search', [ContractTypeController::class, 'search'])->name('search');
+                Route::post('/store', [ContractTypeController::class, 'store'])->name('store');
+                Route::post('/destroy', [ContractTypeController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('levels')->name('levels.')->group(function () {
+                Route::get('/', [LevelController::class, 'index'])->name('index');
+                Route::get('/search', [LevelController::class, 'search'])->name('search');
+                Route::post('/store', [LevelController::class, 'store'])->name('store');
+                Route::post('/destroy', [LevelController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('leave_groups')->name('leave_groups.')->group(function () {
+                Route::get('/', [LeaveGroupController::class, 'index'])->name('index');
+                Route::get('/search', [LeaveGroupController::class, 'search'])->name('search');
+                Route::post('/store', [LeaveGroupController::class, 'store'])->name('store');
+                Route::post('/destroy', [LeaveGroupController::class, 'destroy'])->name('destroy');
             });
 
         });

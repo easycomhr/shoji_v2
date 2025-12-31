@@ -209,13 +209,18 @@ return [
                         ['code' => 'setting_nation', 'name' => 'Nations', 'route_name' => 'admin.nation.index', 'display' => true],
                         ['code' => 'setting_skill', 'name' => 'Skills', 'route_name' => 'admin.skill.index', 'display' => true],
                         ['code' => 'setting_qualification', 'name' => 'Qualifications', 'route_name' => 'admin.qualification.index', 'display' => true],
+                        ['code' => 'setting_contract_type', 'name' => 'Contract Types', 'route_name' => 'admin.contract_types.index', 'display' => true],
                         ['code' => 'setting_family_relationship', 'name' => 'Family Relations', 'route_name' => 'admin.family_relation.index', 'display' => true],
                         ['code' => 'setting_education', 'name' => 'Educations', 'route_name' => 'admin.education.index', 'display' => true],
-                        ['code' => 'setting_grade', 'name' => 'Grade', 'route_name' => 'admin.grade.index', 'display' => true],
+                        ['code' => 'setting_level', 'name' => 'Levels', 'route_name' => 'admin.levels.index', 'display' => true],
                         ['code' => 'setting_user_status', 'name' => 'Employee Statuses', 'route_name' => 'admin.user_status.index', 'display' => true],
-                        ['code' => 'setting_transportation_type', 'name' => 'Transportation Types', 'route_name' => 'admin.transportation_type.index', 'display' => true],
                         ['code' => 'setting_leave_category', 'name' => 'Leave Categories', 'route_name' => 'admin.leave_category.index', 'display' => true],
                         ['code' => 'setting_leave_type', 'name' => 'Leave Types', 'route_name' => 'admin.leave_type.index', 'display' => true],
+
+                        ['code' => 'setting_grade', 'name' => 'Grade', 'route_name' => 'admin.grade.index', 'display' => true],
+                        ['code' => 'setting_transportation_type', 'name' => 'Transportation Types', 'route_name' => 'admin.transportation_type.index', 'display' => true],
+
+
                         ['code' => 'setting_work_shift', 'name' => 'Work Shifts', 'route_name' => 'admin.work_shift.index', 'display' => true],
                     ]
                 ],
