@@ -4,32 +4,28 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class OvertimeType extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
+
+    protected $table = 'overtime_types';
 
     protected $fillable = [
-        'name', 'code', 'rate_multiplier', 'non_tax_multiplier', 'is_active'
+        'company_id',
+        'code',
+        'name',
+        'from_time',
+        'to_time',
+        'paid_rate',
+        'status',
+        'note',
+        'created_user',
+        'updated_user',
     ];
 
     protected $casts = [
-        'rate_multiplier' => 'decimal:2',
-        'non_tax_multiplier' => 'decimal:2',
-        'is_active' => 'boolean',
+        'paid_rate' => 'decimal:2',
     ];
-
-    // === RELATIONSHIPS ===
-
-    public function userOvertimes()
-    {
-        return $this->hasMany(UserOvertime::class);
-    }
-
-    // === SCOPES ===
-
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
-    }
 }
