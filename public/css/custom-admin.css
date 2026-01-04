@@ -6,3 +6,17 @@
 .toast-message{
     font-size: 15px !important;
 }
+
+/* Class để wrap text cho header */
+.wrap-header .x-column-header-inner .x-column-header-text {
+    white-space: normal !important; /* Cho phép xuống dòng */
+    line-height: 1.3 !important;    /* Giãn dòng ra một chút cho dễ đọc */
+    display: inline-block;          /* Giúp text canh chỉnh tốt hơn */
+    vertical-align: middle;
+}
+
+/* (Tùy chọn) Nếu header bị thấp quá che mất chữ, bạn có thể tăng height hoặc padding */
+.wrap-header .x-column-header-inner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
