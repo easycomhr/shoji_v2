@@ -29,6 +29,7 @@ use App\Http\Controllers\Admin\QrCodeController;
 use App\Http\Controllers\Admin\QualificationController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\SyncDataController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TransportationTypeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserStatusController;
@@ -318,6 +319,13 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [LeaveGroupController::class, 'search'])->name('search');
                 Route::post('/store', [LeaveGroupController::class, 'store'])->name('store');
                 Route::post('/destroy', [LeaveGroupController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('team')->name('team.')->group(function () {
+                Route::get('/index', [TeamController::class, 'index'])->name('index');
+                Route::get('/search', [TeamController::class, 'search'])->name('search');
+                Route::post('/store', [TeamController::class, 'store'])->name('store');
+                Route::post('/delete', [TeamController::class, 'destroy'])->name('destroy');
             });
 
         });
