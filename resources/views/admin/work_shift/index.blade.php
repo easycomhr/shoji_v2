@@ -37,10 +37,10 @@
         var lblPageTitle = "{{ __($title) }}";
         var lblCode = "{{ __('') }}";
         var lblName = "{{ __('') }}";
-        var URL_DATA = "{{ route('admin.work_shift.search') }}";
-        var URL_STORE = "{{ route('admin.work_shift.store') }}";
+        var URL_DATA = "{{ route('admin.work_shifts.search') }}";
+        var URL_STORE = "{{ route('admin.work_shifts.store') }}";
         var URL_DATA_OT_TYPE = "{{ route('admin.master_data.ot_type') }}";
-        var URL_DELETE = "{{ route('admin.work_shift.destroy') }}";
+        var URL_DELETE = "{{ route('admin.work_shifts.destroy') }}";
     </script>
 
 @endsection

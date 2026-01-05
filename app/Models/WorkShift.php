@@ -13,12 +13,12 @@ class WorkShift extends Model
     protected $fillable = [
         'company_id',
         'code',
+        'name',
         'work_start',
         'work_end',
         'is_day_off',
         'is_night_shift',
-        'ot_early',
-        'ot_late',
+        'overtime_type_id',
         'note',
     ];
 
@@ -36,6 +36,11 @@ class WorkShift extends Model
         return $this->hasMany(ShiftKey::class);
     }
 
+    public function overtimeTypes()
+    {
+        return $this->belongsTo(OvertimeType::class);
+    }
+
     // === SCOPES ===
 
     public function scopeNightShift($query)
@@ -48,8 +53,5 @@ class WorkShift extends Model
         return $query->where('is_day_off', true);
     }
 
-    public function scopeWorkingShift($query)
-    {
-        return $query->where('is_day_off', false);
-    }
+
 }

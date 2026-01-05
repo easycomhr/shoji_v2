@@ -52,6 +52,7 @@ $company_id = $authUser->company_id ?? null;
         lblFromTime: "{{ __("From Time") }}",
         lblToTime: "{{ __("To Time") }}",
         lblNightShift: "{{ __("Night Shift") }}",
+        lblDefaultOTType: "{{ __("Default OT Type") }}",
         lblDefaultOTEarlyType: "{{ __("Default OT Early Type") }}",
         lblDefaultOTLateType: "{{ __("Default OT Late Type") }}",
         lblFuelPrice: "{{ __("Fuel Price") }}",
