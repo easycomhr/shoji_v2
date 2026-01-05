@@ -7,7 +7,7 @@ Ext.onReady(function(){
     Ext.define('WorkShift', {
         extend : 'Ext.data.Model',
         fields : [
-            'id', 'code', 'work_start', 'work_end', 'is_day_off', 'is_night_shift', 'ot_early', 'ot_night', 'note'
+            'id', 'code', 'work_start', 'work_end', 'is_day_off', 'is_night_shift', 'overtime_type_id', 'note'
         ],
 
     });
@@ -231,10 +231,19 @@ Ext.onReady(function(){
                 dataIndex : 'id',
                 width : 100,
                 hidden : true
-            }, {
+            },
+            {
                 header : HRMS_LABELS.lblCode,
                 dataIndex : 'code',
-                width: 120,
+                width: 100,
+                field : {
+                    type : 'textfield'
+                },
+
+            },{
+                header : HRMS_LABELS.lblName,
+                dataIndex : 'name',
+                width: 150,
                 field : {
                     type : 'textfield'
                 },
@@ -288,21 +297,8 @@ Ext.onReady(function(){
                     checkchange : onCheckColumnChange
                 }
             },{
-                text : HRMS_LABELS.lblDefaultOTEarlyType,
-                dataIndex : 'ot_early',
-                width : 180,
-                renderer: renderOTType,
-                editor:{
-                    xtype : 'combo',
-                    store : storeOTType,
-                    displayField : 'name',
-                    valueField : 'id',
-                    queryMode : 'local',
-                    editable: false // Tùy chọn nếu cần
-                },
-            },{
-                text : HRMS_LABELS.lblDefaultOTLateType,
-                dataIndex : 'ot_late',
+                text : HRMS_LABELS.lblDefaultOTType,
+                dataIndex : 'overtime_type_id',
                 width : 180,
                 renderer: renderOTType,
                 editor:{
@@ -399,22 +395,35 @@ Ext.onReady(function(){
                             name: 'code'
                         },
                         {
-                            xtype: 'timefield',
-                            fieldLabel: HRMS_LABELS.lblWorkStart, // Label cho work_start
-                            name: 'work_start',
-                            format: 'H:i:s', // Định dạng 24 giờ
-                            increment: 15,   // Tăng thời gian theo từng 15 phút
-                            allowBlank: false, // Bắt buộc phải nhập
-                            value: '08:00:00' // Giá trị mặc định là 08:00:00
-                        },
-                        {
-                            xtype: 'timefield',
-                            fieldLabel: HRMS_LABELS.lblWorkEnd, // Label cho work_end
-                            name: 'work_end',
-                            format: 'H:i:s', // Định dạng 24 giờ
-                            increment: 15,   // Tăng thời gian theo từng 15 phút
-                            allowBlank: false, // Bắt buộc phải nhập
-                            value: '17:00:00' // Giá trị mặc định là 08:00:00
+                            xtype: 'container',
+                            layout: 'hbox',
+                            defaults: {
+                                labelWidth: 100,
+                            },
+                            items: [
+                                {
+                                    xtype: 'timefield',
+                                    fieldLabel: HRMS_LABELS.lblWorkStart, // Thay bằng biến label
+                                    labelWidth: 100,
+                                    name: 'work_start',
+                                    format: 'H:i',
+                                    submitFormat: 'H:i:s',
+                                    increment: 15,
+                                    flex: 1,
+                                    margin: '0 10 10 0'
+                                },
+                                {
+                                    xtype: 'timefield',
+                                    fieldLabel: HRMS_LABELS.lblWorkEnd, // Thay bằng biến label
+                                    labelWidth: 80,
+                                    name: 'work_end',
+                                    format: 'H:i',
+                                    submitFormat: 'H:i:s',
+                                    increment: 15,
+                                    flex: 1,
+                                    margin: '0 0 10 10'
+                                }
+                            ]
                         },
                         {
                             xtype: 'checkboxfield', // Checkbox cho Day off
@@ -423,6 +432,7 @@ Ext.onReady(function(){
                             inputValue: true, // Giá trị trả về khi được chọn
                             uncheckedValue: false, // Giá trị trả về khi không được chọn
                             checked: false, // Giá trị mặc định chưa được chọn
+                            margin: '0 0 0 0'
                         },
                         {
                             xtype: 'checkboxfield', // Checkbox cho Night shift
@@ -430,23 +440,13 @@ Ext.onReady(function(){
                             name: 'is_night_shift',
                             inputValue: true, // Giá trị trả về khi được chọn
                             uncheckedValue: false, // Giá trị trả về khi không được chọn
-                            checked: false // Giá trị mặc định chưa được chọn
+                            checked: false, // Giá trị mặc định chưa được chọn
+                            margin: '0 0 0 0'
                         },
                         {
                             xtype: 'combobox',
-                            fieldLabel: HRMS_LABELS.lblDefaultOTEarlyType,
-                            name: 'ot_early',
-                            store: storeOTType, // Dùng storeOTType
-                            displayField: 'name',      // Hiển thị trường name
-                            valueField: 'id',          // Giá trị lưu là trường id
-                            queryMode: 'local',        // Lấy dữ liệu từ store đã tải
-                            editable: false,           // Không cho phép nhập tay
-                            allowBlank: true,          // Cho phép giá trị rỗng nếu cần
-                            emptyText: HRMS_LABELS.lblSelect, // Placeholder nếu không chọn
-                        },{
-                            xtype: 'combobox',
-                            fieldLabel: HRMS_LABELS.lblDefaultOTLateType,
-                            name: 'ot_late',
+                            fieldLabel: HRMS_LABELS.lblDefaultOTType,
+                            name: 'overtime_type_id',
                             store: storeOTType, // Dùng storeOTType
                             displayField: 'name',      // Hiển thị trường name
                             valueField: 'id',          // Giá trị lưu là trường id

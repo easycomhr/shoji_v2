@@ -233,7 +233,7 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::post('/delete', [LeaveTypeController::class, 'destroy'])->name('destroy');
             });
 
-            Route::prefix('work-shift')->name('work_shift.')->group(function () {
+            Route::prefix('work-shift')->name('work_shifts.')->group(function () {
                 Route::get('/index', [WorkShiftController::class, 'index'])->name('index');
                 Route::get('/search', [WorkShiftController::class, 'search'])->name('search');
                 Route::post('/store', [WorkShiftController::class, 'store'])->name('store');
