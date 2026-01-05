@@ -4,24 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\BaseService;
-use App\Services\TeamService;
+use App\Services\SalaryPeriodService;
 use Illuminate\Http\Request;
 
-class TeamController extends Controller
+class SalaryPeriodController extends Controller
 {
-    protected TeamService $teamService;
+    protected SalaryPeriodService $salaryPeriodService;
 
     public function __construct(
-        TeamService $teamService,
+        SalaryPeriodService $salaryPeriodService,
     )
     {
-        $this->teamService = $teamService;
+        $this->salaryPeriodService = $salaryPeriodService;
     }
 
     public function index(){
-        $title = "Management Team";
+        $title = "Management Salary Period";
 
-        return view('admin.team.index', compact('title'));
+        return view('admin.salary_period.index', compact('title'));
     }
 
     public function search(Request $request)
@@ -30,7 +30,7 @@ class TeamController extends Controller
         $action = $request->action ?? config('constant.actions.view');
 
 
-        $response = $this->teamService->search($request);
+        $response = $this->salaryPeriodService->search($request);
 
         return json_encode([
             "success"   => true,
@@ -51,7 +51,7 @@ class TeamController extends Controller
             ]);
         }
 
-        $response = $this->teamService->store($request);
+        $response = $this->salaryPeriodService->store($request);
         if($response){
 
             return response()->json([
@@ -81,7 +81,7 @@ class TeamController extends Controller
                 'message' => __(config('constant.messages.errors.not_enough_permission'))
             ]);
         }
-        $response = $this->teamService->destroy($request);
+        $response = $this->salaryPeriodService->destroy($request);
         if($response){
 
             return response()->json([

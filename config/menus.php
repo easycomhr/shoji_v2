@@ -224,6 +224,8 @@ return [
 
 
 //                        ['code' => 'setting_work_shift', 'name' => 'Work Shifts', 'route_name' => 'admin.work_shift.index', 'display' => true],
+                        ['code' => 'setting_team', 'name' => 'Team Management', 'route_name' => 'admin.team.index', 'display' => true],
+                        ['code' => 'setting_team', 'name' => 'Salary Period Management', 'route_name' => 'admin.salary_period.index', 'display' => true],
                     ]
                 ],
                 ['code' => 'parameter', 'name' => 'Parameter', 'route_name' => 'admin.parameter.index', 'display' => true],
@@ -272,6 +274,8 @@ return [
         'admin.leave_type.index' => 'system_settings',
         'admin.work_shift.index' => 'system_settings',
         'admin.parameter.index' => 'system_settings',
+        'admin.team.index' => 'system_settings',
+        'admin.salary_period.index' => 'system_settings',
     ],
 
 ];

@@ -10,7 +10,7 @@ class SalaryPeriod extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'from_date', 'to_date', 'standard_working_days', 'is_locked'
+        'company_id', 'name', 'from_date', 'to_date', 'standard_working_days', 'is_locked'
     ];
 
     protected $casts = [

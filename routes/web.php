@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\ParameterController;
 use App\Http\Controllers\Admin\PayrollController;
 use App\Http\Controllers\Admin\QrCodeController;
 use App\Http\Controllers\Admin\QualificationController;
+use App\Http\Controllers\Admin\SalaryPeriodController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\SyncDataController;
 use App\Http\Controllers\Admin\TeamController;
@@ -334,6 +335,13 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [TeamController::class, 'search'])->name('search');
                 Route::post('/store', [TeamController::class, 'store'])->name('store');
                 Route::post('/delete', [TeamController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('salary_period')->name('salary_period.')->group(function () {
+                Route::get('/index', [SalaryPeriodController::class, 'index'])->name('index');
+                Route::get('/search', [SalaryPeriodController::class, 'search'])->name('search');
+                Route::post('/store', [SalaryPeriodController::class, 'store'])->name('store');
+                Route::post('/delete', [SalaryPeriodController::class, 'destroy'])->name('destroy');
             });
 
         });
