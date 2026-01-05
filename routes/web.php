@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\MonthlyLeaveBalanceController;
 use App\Http\Controllers\Admin\MonthlyLeaveController;
 use App\Http\Controllers\Admin\NationController;
 use App\Http\Controllers\Admin\OfficeController;
+use App\Http\Controllers\Admin\OvertimeTypeController;
 use App\Http\Controllers\Admin\ParameterController;
 use App\Http\Controllers\Admin\PayrollController;
 use App\Http\Controllers\Admin\QrCodeController;
@@ -319,6 +320,13 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [LeaveGroupController::class, 'search'])->name('search');
                 Route::post('/store', [LeaveGroupController::class, 'store'])->name('store');
                 Route::post('/destroy', [LeaveGroupController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('overtime_types')->name('overtime_types.')->group(function () {
+                Route::get('/', [OvertimeTypeController::class, 'index'])->name('index');
+                Route::get('/search', [OvertimeTypeController::class, 'search'])->name('search');
+                Route::post('/store', [OvertimeTypeController::class, 'store'])->name('store');
+                Route::post('/destroy', [OvertimeTypeController::class, 'destroy'])->name('destroy');
             });
 
             Route::prefix('team')->name('team.')->group(function () {

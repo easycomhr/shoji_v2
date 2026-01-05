@@ -4,16 +4,15 @@ Ext.onReady(function(){
     var s_code;
     var mainGird;
 
-    Ext.define('LeaveType', {
+    Ext.define('ContractType', {
         extend : 'Ext.data.Model',
         fields : [
-            'id', 'leave_category_id', 'code', 'name', 'paid_rate', 'note', 'status'
+            'id', 'code', 'name', 'from_time', 'to_time', 'paid_rate', 'note'
         ],
-
     });
 
     var mainStore = Ext.create('Ext.data.Store', {
-        model : 'LeaveType',
+        model : 'ContractType',
         pageSize: SYSTEM_CONSTANT.DEFAULT_PAGE_SIZE,
         proxy : {
             timeout : APP.TimeOut,
@@ -23,21 +22,17 @@ Ext.onReady(function(){
                 _token: _token,
                 action: SYSTEM_CONSTANT.ACTION_VIEW,
             },
-            extraParams: {
-                orderBy: 'id',        // Sắp xếp theo trường 'id'
-                sortDir: 'DESC'       // Hướng sắp xếp giảm dần
-            },
             reader : {
                 type : 'json',
                 rootProperty : 'rows',
                 successProperty : 'success'
-
             }
         },
         autoLoad : false,
         listeners:{
             beforeload : function(){
                 $.loadingStart();
+
                 if (mainGird && mainGird.rendered) {
                     s_name = Ext.util.Format.trim(mainGird.down("#s_name").getValue() || '');
                     s_code = Ext.util.Format.trim(mainGird.down("#s_code").getValue() || '');
@@ -53,63 +48,14 @@ Ext.onReady(function(){
                 $.loadingEnd();
             }
         }
-
     });
 
     mainStore.sort('id', 'DESC');
-
-    var storeLeaveCategory = Ext.create('Ext.data.Store', {
-        fields : [
-            'id', 'code','name'
-        ],
-        proxy : {
-            timeout : APP.TimeOut,
-            type : 'ajax',
-            url : URL_DATA_LEAVE_CATEGORY,
-            reader : {
-                type : 'json',
-                rootProperty : "data",
-                totalProperty : "results"
-            }
-        },
-        autoLoad : true,
-        listeners: {
-            load: function (store, records, success) {
-                if (success) {
-                    mainStore.load(); // Chỉ load mainStore sau khi storeLeaveCategory load thành công
-                } else {
-                    console.error('Error loading storeLeaveCategory');
-                }
-            }
-        }
-    });
-
-    function renderLeaveCategory(value) {
-        try {
-            console.log('Value:', value);
-            console.log('Store data:', storeLeaveCategory.getData().items);
-
-            if (value == null || value === '') {
-                return '';
-            }
-
-            const record = storeLeaveCategory.queryBy(function(rec) {
-                return rec.get('id') === value; // Sử dụng rec.get để truy xuất giá trị chính xác
-            }).first(); // Lấy bản ghi đầu tiên tìm thấy
-
-            return record ? record.get('name') : ''; // Trả về `name` hoặc chuỗi rỗng nếu không tìm thấy
-        } catch (e) {
-            console.error('Error in renderLeaveCategory:', e);
-        }
-    }
-
-
 
     var myPagingToolbar = Ext.create('Ext.PagingToolbar', {
         align: 'center',
         displayInfo: true,
         store: mainStore,
-
     });
 
     mainGird = Ext.create('Ext.grid.Panel', {
@@ -146,7 +92,6 @@ Ext.onReady(function(){
                         width : 150,
                         listeners : {
                             specialkey : function(s, e){
-
                                 if(e.getKey() === Ext.EventObject.ENTER){
                                     mainStore.load();
                                 }
@@ -165,7 +110,6 @@ Ext.onReady(function(){
                         width : 200,
                         listeners : {
                             specialkey : function(s, e){
-
                                 if(e.getKey() === Ext.EventObject.ENTER){
                                     mainStore.load();
                                 }
@@ -185,7 +129,6 @@ Ext.onReady(function(){
                         iconCls : 'icon-add',
                         handler : onAddClick
                     }
-
                 ]
             },
         ],
@@ -195,16 +138,21 @@ Ext.onReady(function(){
             selType : 'cellmodel'
         },
         plugins : [
-
             {
                 ptype : 'cellediting',
                 clicksToEdit : 1,
                 autoCancel : false,
                 listeners : {
                     edit : function(editor, e){
+                        // Xử lý logic format lại date nếu cần trước khi gửi server
+                        var val = e.value;
+                        if (e.field === 'from_time' || e.field === 'to_time') {
+                            if (val instanceof Date) {
+                                val = Ext.Date.format(val, 'H:i:s');
+                            }
+                        }
 
                         if(e.originalValue != e.value && e.value != '' ){
-
                             var conn = new Ext.data.Connection();
                             conn.request({
                                 url : URL_STORE,
@@ -213,18 +161,14 @@ Ext.onReady(function(){
                                     _token: _token,
                                     id : e.record.id,
                                     field : e.field,
-                                    value : e.value,
-
+                                    value : val, // Sử dụng giá trị đã xử lý
                                 },
                                 success : function(resp, opt){
-
                                     var result = Ext.util.JSON.decode(resp.responseText);
                                     if(result.success){
                                         $.showMessage('success', result.message);
                                         e.record.commit();
-
                                     }else{
-
                                         $.showMessage('error', result.message);
                                         e.record.reject();
                                     }
@@ -234,7 +178,6 @@ Ext.onReady(function(){
                                     $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
                                 }
                             });
-
                         }else{
                             e.record.reject();
                         }
@@ -243,7 +186,6 @@ Ext.onReady(function(){
             }, {
                 ptype : 'gridfilters'
             }
-
         ],
         columns : [
             {
@@ -255,46 +197,63 @@ Ext.onReady(function(){
                 header : HRMS_LABELS.lblCode,
                 dataIndex : 'code',
                 width: 120,
-                field : {
-                    type : 'textfield'
-                },
-
+                editor : { // Đổi từ field sang editor cho chuẩn ExtJS 6
+                    xtype : 'textfield'
+                }
             },{
                 header : HRMS_LABELS.lblName,
                 dataIndex : 'name',
-                width: 200,
-                field : {
-                    type : 'textfield'
-                },
-            },{
-                text : HRMS_LABELS.lblLeaveCategory,
-                dataIndex : 'leave_category_id',
-                width : 210,
-                renderer: renderLeaveCategory,
-                editor:{
-                    xtype : 'combo',
-                    store : storeLeaveCategory,
-                    displayField : 'name',
-                    valueField : 'id',
-                    queryMode : 'local',
-                    editable: false // Tùy chọn nếu cần
-                },
-            },{
+                width : 200,
+                editor : {
+                    xtype : 'textfield'
+                }
+            },
+            // --- CÁC CỘT MỚI THÊM ---
+            {
+                header : HRMS_LABELS.lblFromTime, // Thay bằng HRMS_LABELS.lblFromTime nếu có
+                dataIndex : 'from_time',
+                width : 100,
                 align: 'center',
-                header : HRMS_LABELS.lblPaidRate+'(%)',
+                editor : {
+                    xtype : 'timefield',
+                    format: 'H:i',
+                    submitFormat: 'H:i:s',
+                    increment: 15
+                }
+            },
+            {
+                header : HRMS_LABELS.lblToTime, // Thay bằng HRMS_LABELS.lblToTime nếu có
+                dataIndex : 'to_time',
+                width : 100,
+                align: 'center',
+                editor : {
+                    xtype : 'timefield',
+                    format: 'H:i',
+                    submitFormat: 'H:i:s',
+                    increment: 15
+                }
+            },
+            {
+                header : HRMS_LABELS.lblPaidRate+"(%)", // Thay bằng HRMS_LABELS.lblPaidRate nếu có
                 dataIndex : 'paid_rate',
-                width: 150,
-                field : {
-                    type : 'numberfield'
-                },
-            },{
+                cls: 'wrap-header',
+                width : 150,
+                align: 'center',
+                editor : {
+                    xtype : 'numberfield',
+                    minValue: 0,
+                    decimalPrecision: 2
+                }
+            },
+            // -------------------------
+            {
                 header : HRMS_LABELS.lblNote,
                 dataIndex : 'note',
                 flex: 1,
-                field : {
-                    type : 'textfield'
-                },
-
+                align: 'left',
+                editor : {
+                    xtype : 'textfield'
+                }
             },{
                 align: "center",
                 header: HRMS_LABELS.lblAction,
@@ -311,22 +270,23 @@ Ext.onReady(function(){
                 ],
             }
         ],
-
     });
 
+    // Hàm cập nhật field chung có thể tái sử dụng
     function initModalEdit() {
         return Ext.create('Ext.window.Window', {
-            title: HRMS_LABELS.lblAddNew,
+            title: HRMS_LABELS.lblCreate,
             modal: true,
             width: 500,
             y: 100,
+            closeAction: 'destroy',
             items: [
                 {
                     xtype: 'form',
                     bodyPadding: 10,
                     defaults: {
-                        labelWidth: 100, // Set label width for all fields
-                        width: '100%'    // Set input width for all fields
+                        labelWidth: 100 ,
+                        width: '100%'
                     },
                     items: [
                         {
@@ -345,41 +305,60 @@ Ext.onReady(function(){
                         },
                         {
                             xtype: 'textfield',
-                            fieldLabel: HRMS_LABELS.lblName + ' (*)',
+                            fieldLabel: HRMS_LABELS.lblName+'(*)',
                             name: 'name',
                             allowBlank: false,
                         },
+                        // --- CÁC FIELD MỚI THÊM VÀO FORM ---
                         {
-                            xtype: 'combobox',
-                            fieldLabel: HRMS_LABELS.lblLeaveCategory,
-                            name: 'leave_category_id',
-                            store: storeLeaveCategory, // Dùng storeLeaveCategory
-                            displayField: 'name',      // Hiển thị trường name
-                            valueField: 'id',          // Giá trị lưu là trường id
-                            queryMode: 'local',        // Lấy dữ liệu từ store đã tải
-                            editable: false,           // Không cho phép nhập tay
-                            allowBlank: true,          // Cho phép giá trị rỗng nếu cần
-                            emptyText: HRMS_LABELS.lblSelect, // Placeholder nếu không chọn
-                        },{
-                            xtype: 'numberfield',
-                            fieldLabel: HRMS_LABELS.lblPaidRate+"(%)",
-                            name: 'paid_rate',
-                            allowBlank: false,
-                            decimalPrecision: 2, // Allows up to 2 decimal places
-                            step: 0.01,          // Increments by 0.01
-                            minValue: 0,          // Ensures no negative numbers if applicable
-                            maxvalue: 0
+                            xtype: 'container',
+                            layout: 'hbox',
+                            defaults: {
+                                labelWidth: 100,
+                            },
+                            items: [
+                                {
+                                    xtype: 'timefield',
+                                    fieldLabel: HRMS_LABELS.lblFromTime, // Thay bằng biến label
+                                    name: 'from_time',
+                                    format: 'H:i',
+                                    submitFormat: 'H:i:s',
+                                    increment: 15,
+                                    flex: 1,
+                                    margin: '0 5 0 0'
+                                },
+                                {
+                                    xtype: 'timefield',
+                                    fieldLabel: HRMS_LABELS.lblToTime, // Thay bằng biến label
+                                    name: 'to_time',
+                                    format: 'H:i',
+                                    submitFormat: 'H:i:s',
+                                    increment: 15,
+                                    flex: 1,
+                                    labelWidth: 60, // Label ngắn hơn cho cột thứ 2
+                                    margin: '0 0 0 5'
+                                }
+                            ]
                         },
+                        {
+                            xtype: 'numberfield',
+                            fieldLabel: HRMS_LABELS.lblPaidRate+"(%)", // Thay bằng biến label
+                            name: 'paid_rate',
+                            minValue: 0,
+                            decimalPrecision: 2,
+                            value: 0
+                        },
+                        // -----------------------------------
                         {
                             xtype: 'textareafield',
                             fieldLabel: HRMS_LABELS.lblNote,
                             name: 'note'
                         },
                         {
-                            xtype: 'checkboxfield',  // Checkbox field
+                            xtype: 'checkboxfield',
                             fieldLabel: HRMS_LABELS.lblContinueAdd,
                             name: 'is_continue',
-                            checked: false  // Set to true nếu muốn checkbox mặc định được chọn
+                            checked: false
                         }
                     ]
                 }
@@ -394,8 +373,13 @@ Ext.onReady(function(){
                         handler: function () {
                             var modal = this.up('window');
                             var form = this.up('window').down('form');
-                            var formData = form.getValues();
-                            saveData(formData, form, modal);
+                            // Cần kiểm tra validate form trước khi lưu
+                            if(form.isValid()){
+                                var formData = form.getValues();
+                                saveData(formData, form, modal);
+                            } else {
+                                Ext.Msg.alert('Warning', 'Please check input data.');
+                            }
                         }
                     },
                     {
@@ -406,10 +390,8 @@ Ext.onReady(function(){
                     }
                 ]
             },
-
         });
     }
-
 
     function onAddClick() {
         var modalEdit = initModalEdit();
@@ -421,30 +403,31 @@ Ext.onReady(function(){
         conn.request({
             url : URL_STORE,
             timeout : APP.TimeOut,
-            params: formData,
-            success: function(resp, opt) {
+            params:formData,
+            success : function(resp, opt){
+                $.loadingEnd();
                 var result = Ext.util.JSON.decode(resp.responseText);
-                if (result.success) {
+                if(result.success){
                     $.showMessage('success', result.message);
 
                     mainStore.load();
                     mainGird.getView().scrollTo(0,0);
 
                     if(parseInt(result.is_continue) === 0){
-                        modal.close();  // Đóng và destroy
+                        modal.close();
                     } else {
-                        form.reset();   // ← Chỉ reset khi tiếp tục thêm
+                        form.reset();
                     }
-                } else {
+                }else{
                     $.showMessage('error', result.message);
                 }
             },
-            failure: function() {
+            failure : function(){
+                $.loadingEnd();
                 $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
             }
         });
     }
-
 
     function onDeleteClick(view, recIndex, cellIndex, item, e, selection){
         Ext.MessageBox.show({
@@ -453,42 +436,41 @@ Ext.onReady(function(){
             icon: Ext.MessageBox.WARNING,
             buttons: Ext.MessageBox.OKCANCEL,
             fn: function(btn) {
-                if (btn === 'ok') {
-                    if (selection && selection.data) { // Kiểm tra selection tồn tại
-                        Ext.Msg.wait(
-                            TRANSLATED_LABELS.lblDeletingData,
-                            TRANSLATED_LABELS.lblDeletingDataContent,
-                            {
-                                interval: 1000,
-                                duration: 50000,
-                                increment: 50,
-                                scope: this,
+                if (btn === 'ok'){
+                    Ext.Msg.wait(
+                        TRANSLATED_LABELS.lblDeletingData,
+                        TRANSLATED_LABELS.lblDeletingDataContent,
+                        {
+                            interval: 1000,
+                            duration: 50000,
+                            increment: 50,
+                            scope: this,
+                        }
+                    );
+                    selection = selection ? selection : mainGird.getView().getSelectionModel().getSelection()[0];
+                    var conn = new Ext.data.Connection();
+                    conn.request({
+                        url: URL_DELETE,
+                        timeout: APP.TimeOut,
+                        params: {
+                            _token: _token,
+                            action: SYSTEM_CONSTANT.ACTION_DELETE,
+                            id: selection.data.id,
+                        },
+                        success: function(resp,opt){
+                            var result = Ext.util.JSON.decode(resp.responseText);
+                            Ext.Msg.hide();
+                            if(result.success){
+                                $.showMessage('success', result.message);
+                                mainGird.store.remove(selection);
+                            }else{
+                                $.showMessage('error', result.message);
                             }
-                        );
-                        var conn = new Ext.data.Connection();
-                        conn.request({
-                            url: URL_DELETE,
-                            timeout: APP.TimeOut,
-                            params: {
-                                _token: _token,
-                                action: SYSTEM_CONSTANT.ACTION_DELETE,
-                                id: selection.data.id,
-                            },
-                            success: function(resp, opt) {
-                                var result = Ext.util.JSON.decode(resp.responseText);
-                                Ext.Msg.hide();
-                                if (result.success) {
-                                    $.showMessage('success', result.message);
-                                    mainGird.store.remove(selection);
-                                } else {
-                                    $.showMessage('error', result.message);
-                                }
-                            },
-                            failure: function(resp, opt) {
-                                $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
-                            }
-                        });
-                    }
+                        },
+                        failure: function(resp,opt){
+                            $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
+                        }
+                    });
                 }
             }
         });
@@ -499,11 +481,10 @@ Ext.onReady(function(){
     }
 
     var element = Ext.get('main-gird');
-
-    element.on('resize', function(e) {
-        if (mainGird) {
-            mainGird.update(); // Chỉ gọi nếu `mainGird` tồn tại
-        }
-    });
+    if(element){
+        element.on('resize', function(e) {
+            mainGird.update();
+        });
+    }
 
 });
