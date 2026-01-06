@@ -348,13 +348,16 @@ Ext.onReady(function(){
                 if (result.success) {
                     $.showMessage('success', result.message);
 
-                    mainStore.load();
-                    mainGird.getView().scrollTo(0,0);
-
                     if(parseInt(result.is_continue) === 0){
                         modal.close();  // Đóng và destroy
+                        Ext.defer(function() {
+                            mainStore.load();
+                            mainGird.getView().scrollTo(0,0);
+                        }, 100);
                     } else {
                         form.reset();   // ← Chỉ reset khi tiếp tục thêm
+                        mainStore.load();
+                        mainGird.getView().scrollTo(0,0);
                     }
                 } else {
                     $.showMessage('error', result.message);
