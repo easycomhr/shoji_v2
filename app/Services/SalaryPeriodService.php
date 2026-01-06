@@ -41,12 +41,11 @@ class SalaryPeriodService
                 $params['company_id'] = Auth::user()->company_id;
                 $response = $this->salaryPeriodRepository->create($params);
             }else{
-
-                if($request->field){
-                    $params[$request->field] = $request->value;
+                if($request->field) {
+                    $response = $this->salaryPeriodRepository->updateById($request->id, [
+                        $request->field => $request->value
+                    ]);
                 }
-
-                $response = $this->salaryPeriodRepository->updateById($request->id, $params);
             }
             DB::commit();
             return $response;

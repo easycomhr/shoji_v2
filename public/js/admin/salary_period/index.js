@@ -12,7 +12,7 @@ Ext.onReady(function(){
             {name: 'from_date', type: 'date'},
             {name: 'to_date', type: 'date'},
             'standard_working_days',
-            {name: 'is_locked', type: 'int'}
+            {name: 'is_locked', type: 'boolean'}
         ],
 
     });
@@ -163,35 +163,7 @@ Ext.onReady(function(){
 
                         if(e.originalValue != e.value && e.value != '' ){
 
-                            var conn = new Ext.data.Connection();
-                            conn.request({
-                                url : URL_STORE,
-                                timeout : APP.TimeOut,
-                                params : {
-                                    _token: _token,
-                                    id : e.record.id,
-                                    field : e.field,
-                                    value : e.value,
-
-                                },
-                                success : function(resp, opt){
-
-                                    var result = Ext.util.JSON.decode(resp.responseText);
-                                    if(result.success){
-                                        $.showMessage('success', result.message);
-                                        e.record.commit();
-
-                                    }else{
-
-                                        $.showMessage('error', result.message);
-                                        e.record.reject();
-                                    }
-                                },
-                                failure : function(){
-                                    e.record.reject();
-                                    $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
-                                }
-                            });
+                            updateRecord(e.record, e.record.id, e.field, e.value);
 
                         }else{
                             e.record.reject();
@@ -250,7 +222,7 @@ Ext.onReady(function(){
             },
             {
                 text: HRMS_LABELS.lblLocked,
-                dataIndex: 'is_lock',
+                dataIndex: 'is_locked',
                 width: 90,
                 align: 'center',
                 renderer: function(value, metaData, record) {
@@ -327,7 +299,7 @@ Ext.onReady(function(){
                         {
                             xtype: 'checkboxfield',  // Checkbox field
                             fieldLabel: HRMS_LABELS.lblLocked,
-                            name: 'is_lock',
+                            name: 'is_locked',
                             checked: false  // Set to true if you want the checkbox to be initially checked
                         },
                     ]
@@ -460,11 +432,45 @@ Ext.onReady(function(){
             var record = mainStore.findRecord('id', recordId);
             if (record) {
                 var newValue = checkbox.checked ? 1 : 0;
-                record.set('is_lock', newValue);
+                record.set('is_locked', newValue);
+                updateRecord(record, recordId, 'is_locked', newValue)
             }
         } catch (e) {
             console.error('Error toggling locked:', e);
         }
     };
+
+    function updateRecord(record, id, field, value)
+    {
+        var conn = new Ext.data.Connection();
+        conn.request({
+            url : URL_STORE,
+            timeout : APP.TimeOut,
+            params : {
+                _token: _token,
+                id : id,
+                field : field,
+                value : value,
+
+            },
+            success : function(resp, opt){
+
+                var result = Ext.util.JSON.decode(resp.responseText);
+                if(result.success){
+                    $.showMessage('success', result.message);
+                    record.commit();
+
+                }else{
+
+                    $.showMessage('error', result.message);
+                    record.reject();
+                }
+            },
+            failure : function(){
+                record.reject();
+                $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
+            }
+        });
+    }
 
 });
