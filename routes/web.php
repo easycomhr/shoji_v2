@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AllowanceTypeController;
 use App\Http\Controllers\Admin\AnnualLeaveController;
+use App\Http\Controllers\Admin\AttendancePeriodController;
 use App\Http\Controllers\Admin\CalculateSalaryController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\ContractTypeController;
@@ -342,6 +343,13 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [SalaryPeriodController::class, 'search'])->name('search');
                 Route::post('/store', [SalaryPeriodController::class, 'store'])->name('store');
                 Route::post('/delete', [SalaryPeriodController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('attendance_period')->name('attendance_period.')->group(function () {
+                Route::get('/index', [AttendancePeriodController::class, 'index'])->name('index');
+                Route::get('/search', [AttendancePeriodController::class, 'search'])->name('search');
+                Route::post('/store', [AttendancePeriodController::class, 'store'])->name('store');
+                Route::post('/delete', [AttendancePeriodController::class, 'destroy'])->name('destroy');
             });
 
         });

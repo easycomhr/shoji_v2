@@ -2,28 +2,28 @@
 
 namespace App\Services;
 
-use App\Repositories\SalaryPeriodRepository;
+use App\Repositories\AttendancePeriodRepository;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class SalaryPeriodService
+class AttendancePeriodService
 {
-    protected SalaryPeriodRepository $salaryPeriodRepository;
+    protected AttendancePeriodRepository $attendancePeriodRepository;
 
     public function __construct(
-        SalaryPeriodRepository $salaryPeriodRepository,
+        AttendancePeriodRepository $attendancePeriodRepository,
     )
     {
-        $this->salaryPeriodRepository = $salaryPeriodRepository;
+        $this->attendancePeriodRepository = $attendancePeriodRepository;
     }
 
     public function search($request){
-        return $this->salaryPeriodRepository->search($request);
+        return $this->attendancePeriodRepository->search($request);
     }
 
     public function getAll($request){
-        return $this->salaryPeriodRepository->getAll($request);
+        return $this->attendancePeriodRepository->getAll($request);
     }
 
     public function store($request){
@@ -39,10 +39,10 @@ class SalaryPeriodService
         try {
             if(empty($request->id)){
                 $params['company_id'] = Auth::user()->company_id;
-                $response = $this->salaryPeriodRepository->create($params);
+                $response = $this->attendancePeriodRepository->create($params);
             }else{
                 if($request->field) {
-                    $response = $this->salaryPeriodRepository->updateById($request->id, [
+                    $response = $this->attendancePeriodRepository->updateById($request->id, [
                         $request->field => $request->value
                     ]);
                 }
@@ -51,7 +51,7 @@ class SalaryPeriodService
             return $response;
         } catch (\Exception $e) {
             DB::rollBack();
-            logger()->error(sprintf("SalaryPeriodService@store %s", $e->getMessage()));
+            logger()->error(sprintf("AttendancePeriodService@store %s", $e->getMessage()));
 
             return false;
         }
@@ -62,12 +62,12 @@ class SalaryPeriodService
 
         DB::beginTransaction();
         try {
-            $this->salaryPeriodRepository->deleteById($request->id);
+            $this->attendancePeriodRepository->deleteById($request->id);
             DB::commit();
             return true;
         } catch (\Exception $e) {
             DB::rollBack();
-            logger()->error(sprintf("SalaryPeriodService@destroy %s", $e->getMessage()));
+            logger()->error(sprintf("AttendancePeriodService@destroy %s", $e->getMessage()));
 
             return false;
         }
