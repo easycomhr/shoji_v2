@@ -8,6 +8,7 @@ use App\Services\DepartmentService;
 use App\Services\LeaveCategoryService;
 use App\Services\LeaveTypeService;
 use App\Services\PositionService;
+use App\Services\TeamService;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,7 @@ class MasterDataController extends Controller
     protected UserService $userService;
     protected PositionService  $positionService;
     protected DepartmentService $departmentService;
+    protected TeamService $teamService;
 
     public function __construct(
         LeaveTypeService $leaveTypeService,
@@ -25,6 +27,7 @@ class MasterDataController extends Controller
         UserService $userService,
         PositionService  $positionService,
         DepartmentService $departmentService,
+        TeamService $teamService,
     )
     {
         $this->leaveTypeService = $leaveTypeService;
@@ -32,6 +35,7 @@ class MasterDataController extends Controller
         $this->userService = $userService;
         $this->positionService = $positionService;
         $this->departmentService = $departmentService;
+        $this->teamService = $teamService;
     }
 
     public function index(){
@@ -185,6 +189,17 @@ class MasterDataController extends Controller
             'success' => true,
             'data' => $data->toArray() ?? [],
             'results' => $data->count(),
+        ]);
+    }
+
+    public function parentTeam(Request $request)
+    {
+        $response = $this->teamService->getAll($request);
+
+        return json_encode([
+            "success"   => true,
+            "data"      => $response->toArray() ?? [],
+            "results"   => count($response) ?? 0,
         ]);
     }
 

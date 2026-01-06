@@ -217,6 +217,7 @@ $company_id = $authUser->company_id ?? null;
         lblIsTax: "{{ __('Is Tax') }}",
         lblIsSocialInsurance: "{{ __('Is Social Insurance') }}",
         lblAreaCode: "{{ __('Area Code') }}",
+        lblParentTeam: "{{ __('Parent Team') }}",
     };
 
     var SYSTEM_CONSTANT = {

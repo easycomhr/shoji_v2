@@ -32,6 +32,8 @@ class TeamService
             'parent_id' => $request->parent_id,
         ];
 
+
+
         DB::beginTransaction();
         try {
             if(empty($request->id)){

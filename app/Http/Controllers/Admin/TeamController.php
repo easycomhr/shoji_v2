@@ -19,9 +19,15 @@ class TeamController extends Controller
     }
 
     public function index(){
-        $title = "Management Team";
+        $title = "Management Team Parent";
 
         return view('admin.team.index', compact('title'));
+    }
+
+    public function subteam(){
+        $title = "Management Team";
+
+        return view('admin.team.subteam', compact('title'));
     }
 
     public function search(Request $request)

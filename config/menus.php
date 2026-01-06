@@ -225,8 +225,9 @@ return [
 
 //                        ['code' => 'setting_work_shift', 'name' => 'Work Shifts', 'route_name' => 'admin.work_shift.index', 'display' => true],
                         ['code' => 'setting_team', 'name' => 'Team Management', 'route_name' => 'admin.team.index', 'display' => true],
-                        ['code' => 'setting_team', 'name' => 'Salary Period Management', 'route_name' => 'admin.salary_period.index', 'display' => true],
-                        ['code' => 'setting_team', 'name' => 'Attendance Period Management', 'route_name' => 'admin.attendance_period.index', 'display' => true],
+                        ['code' => 'setting_subteam', 'name' => 'Subteam Management', 'route_name' => 'admin.team.subteam', 'display' => true],
+                        ['code' => 'setting_salary_period', 'name' => 'Salary Period Management', 'route_name' => 'admin.salary_period.index', 'display' => true],
+                        ['code' => 'setting_attendance_period', 'name' => 'Attendance Period Management', 'route_name' => 'admin.attendance_period.index', 'display' => true],
                     ]
                 ],
                 ['code' => 'parameter', 'name' => 'Parameter', 'route_name' => 'admin.parameter.index', 'display' => true],
@@ -276,6 +277,7 @@ return [
         'admin.work_shift.index' => 'system_settings',
         'admin.parameter.index' => 'system_settings',
         'admin.team.index' => 'system_settings',
+        'admin.team.subteam' => 'system_settings',
         'admin.salary_period.index' => 'system_settings',
         'admin.attendance_period.index' => 'system_settings',
     ],

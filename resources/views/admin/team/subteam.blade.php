@@ -37,15 +37,16 @@
         var lblPageTitle = "{{ __($title) }}";
         var lblCode = "{{ __('') }}";
         var lblName = "{{ __('') }}";
-        var URL_DATA = "{{ route('admin.team.search', ['is_parent' => true]) }}";
+        var URL_DATA = "{{ route('admin.team.search', ['is_parent' => false]) }}";
         var URL_STORE = "{{ route('admin.team.store') }}";
         var URL_DELETE = "{{ route('admin.team.destroy') }}";
+        var URL_PARENT_TEAM = "{{ route('admin.master_data.get_parent_team') }}";
     </script>
 
 @endsection
 
 @section("pagescript")
-    <script src="{{asset('js/admin/team/index.js?t='.config('constant.app_version'))}}"></script>
+    <script src="{{asset('js/admin/team/subteam.js?t='.config('constant.app_version'))}}"></script>
 @endsection
 
 

@@ -254,6 +254,7 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/positions', [MasterDataController::class, 'position'])->name('positions');
                 Route::get('/departments', [MasterDataController::class, 'department'])->name('departments');
                 Route::get('/get-salary-period', [MasterDataController::class, 'getPeriods'])->name('get_salary_period');
+                Route::get('/get-parent-team', [MasterDataController::class, 'parentTeam'])->name('get_parent_team');
             });
 
             Route::prefix('annual-leave')->name('annual_leave.')->group(function () {
@@ -333,6 +334,7 @@ Route::group(['middleware' => ['auth']], function () {
 
             Route::prefix('team')->name('team.')->group(function () {
                 Route::get('/index', [TeamController::class, 'index'])->name('index');
+                Route::get('/subteam', [TeamController::class, 'subteam'])->name('subteam');
                 Route::get('/search', [TeamController::class, 'search'])->name('search');
                 Route::post('/store', [TeamController::class, 'store'])->name('store');
                 Route::post('/delete', [TeamController::class, 'destroy'])->name('destroy');
