@@ -3,30 +3,48 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\CompanyRepository;
+use App\Services\AttendancePeriodService;
 use App\Services\BaseService;
-use App\Services\CompanyService;
+use App\Services\ParameterService;
+use App\Services\SalaryPeriodService;
 use Illuminate\Http\Request;
 
 class ParameterController extends Controller
 {
-    protected CompanyService $companyService;
+    protected ParameterService $parameterService;
 
-    public function __construct(CompanyService $companyService)
+    public function __construct(
+        ParameterService $parameterService,
+    )
     {
-        $this->companyService = $companyService;
+        $this->parameterService = $parameterService;
     }
 
     public function index(){
-        $title = "Company Information";
+        $title = "System Parameters";
 
-        return view('admin.company.index', compact('title'));
+        return view('admin.system_parameter.index', compact('title'));
     }
 
+    public function search(Request $request)
+    {
+
+        $action = $request->action ?? config('constant.actions.view');
+
+
+        $response = $this->parameterService->search($request);
+
+        return json_encode([
+            "success"   => true,
+            "rows"      => $response['results'] ?? [],
+            "total"     => $response['recordsTotal'] ?? 0,
+        ]);
+    }
 
     function store(Request $request){
 
-        $isAllow = BaseService::verifyAction($request, config('constant.actions.update'));
+        $action = $request->action ?? config('constant.actions.insert');
+        $isAllow = BaseService::verifyAction($request, $action);
 
         if(!$isAllow){
             return json_encode([
@@ -34,7 +52,8 @@ class ParameterController extends Controller
                 'message' => __(config('constant.messages.errors.not_enough_permission'))
             ]);
         }
-        $response = $this->companyService->store($request);
+
+        $response = $this->parameterService->store($request);
         if($response){
 
             return response()->json([
@@ -53,4 +72,30 @@ class ParameterController extends Controller
         ]);
     }
 
+    function destroy(Request $request){
+
+        $action = $request->action ?? config('constant.actions.insert');
+        $isAllow = BaseService::verifyAction($request, $action);
+
+        if(!$isAllow){
+            return json_encode([
+                'success' => false,
+                'message' => __(config('constant.messages.errors.not_enough_permission'))
+            ]);
+        }
+        $response = $this->parameterService->destroy($request);
+        if($response){
+
+            return response()->json([
+                'success' => true,
+                'message' => __(config('messages.commons.delete_success')),
+            ]);
+
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => __(config('messages.commons.delete_failed')),
+        ]);
+    }
 }

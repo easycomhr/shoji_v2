@@ -9,7 +9,10 @@ class SystemParameter extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['key', 'value', 'description', 'data_type'];
+    protected $fillable = ['key', 'value', 'description', 'data_type', 'apply_date', 'company_id'];
+    protected $casts = [
+        'apply_date' => 'date:Y-m-d',
+    ];
 
     // === METHODS ===
 

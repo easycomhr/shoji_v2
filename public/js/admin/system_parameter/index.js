@@ -1,0 +1,455 @@
+Ext.onReady(function(){
+
+    var s_key;
+    var isLoading = false;
+    var mainGird;
+
+    Ext.define('SystemParameter', {
+        extend : 'Ext.data.Model',
+        fields : [
+            'id',
+            'key',
+            'value',
+            'description',
+            {
+                name: 'apply_date',
+                type: 'date'
+            },
+
+        ],
+
+    });
+
+    var mainStore = Ext.create('Ext.data.Store', {
+        model : 'SystemParameter',
+        pageSize: SYSTEM_CONSTANT.DEFAULT_PAGE_SIZE,
+        proxy : {
+            timeout : APP.TimeOut,
+            type : 'ajax',
+            url : URL_DATA,
+            params: {
+                _token: _token,
+                action: SYSTEM_CONSTANT.ACTION_VIEW,
+            },
+            extraParams: {
+                orderBy: 'id',        // Sắp xếp theo trường 'id'
+                sortDir: 'DESC'       // Hướng sắp xếp giảm dần
+            },
+            reader : {
+                type : 'json',
+                rootProperty : 'rows',
+                successProperty : 'success'
+
+            }
+        },
+        autoLoad : false,
+        listeners:{
+            beforeload : function(){
+                if (isLoading) {
+                    return false;
+                }
+                isLoading = true;
+
+                // Thay $.loadingStart() bằng:
+                if (mainGird && mainGird.rendered) {
+                    mainGird.setLoading(true);  // ← Loading mask của ExtJS
+                    s_key = Ext.util.Format.trim(mainGird.down("#s_key").getValue() || '');
+                } else {
+                    s_key = '';
+                }
+
+                mainStore.getProxy().extraParams.key = s_key;
+            },
+            load: function () {
+                isLoading = false;
+
+                // Thay $.loadingEnd() bằng:
+                if (mainGird && mainGird.rendered) {
+                    mainGird.setLoading(false);
+                }
+            },
+            exception: function() {
+                isLoading = false;
+
+                // Thay $.loadingEnd() bằng:
+                if (mainGird && mainGird.rendered) {
+                    mainGird.setLoading(false);
+                }
+            }
+
+        }
+
+    });
+
+    mainStore.sort('id', 'DESC');
+
+
+
+    var myPagingToolbar = Ext.create('Ext.PagingToolbar', {
+        align: 'center',
+        displayInfo: true,
+        store: mainStore,
+
+    });
+
+    mainGird = Ext.create('Ext.grid.Panel', {
+        renderTo: "main-gird",
+        store : mainStore,
+        title : lblPageTitle,
+        listeners : {
+            afterrender: function() {
+                console.log("mainGird rendered");
+                mainStore.load();
+            },
+            itemkeydown: function(view, record, item, index, key) {
+                if (key.getKey() === SYSTEM_CONSTANT.DELETE_KEY) {
+                    var selection = mainGird.getView().getSelectionModel().getSelection()[0];
+                    if(selection){
+                        onDeleteClick()
+                    }
+                }
+            },
+        },
+        dockedItems : [
+            {
+                xtype : 'toolbar',
+                dock : 'top',
+                items : [
+                    {
+                        xtype : 'tbtext',
+                        text : HRMS_LABELS.lblKey,
+                        width : 50
+                    }, {
+                        xtype : 'textfield',
+                        id : 's_key',
+                        itemId : 's_key',
+                        width : 200,
+                        listeners : {
+                            specialkey : function(s, e){
+
+                                if(e.getKey() === Ext.EventObject.ENTER){
+                                    mainStore.load();
+                                }
+                            }
+                        }
+                    }, {
+                        xtype : 'tbseparator'
+                    }, {
+                        iconCls: 'icon-find',
+                        text: HRMS_LABELS.lblFind,
+                        scope: this,
+                        handler: onFindClick
+                    },'->',
+                    {
+                        xtype : 'button',
+                        text : HRMS_LABELS.lblInsert,
+                        iconCls : 'icon-add',
+                        handler : onAddClick
+                    }
+
+                ]
+            },
+        ],
+
+        bbar:['->', myPagingToolbar, { xtype: 'tbfill' } ],
+        selModel : {
+            selType : 'cellmodel'
+        },
+        plugins : [
+
+            {
+                ptype : 'cellediting',
+                clicksToEdit : 1,
+                autoCancel : false,
+                listeners : {
+                    edit : function(editor, e){
+
+                        if(e.originalValue != e.value && e.value != '' ){
+
+                            updateRecord(e.record, e.record.id, e.field, e.value);
+
+                        }else{
+                            e.record.reject();
+                        }
+                    }
+                }
+            }, {
+                ptype : 'gridfilters'
+            }
+
+        ],
+        columns : [
+            {
+                header : 'ID',
+                dataIndex : 'id',
+                width : 100,
+                hidden : true
+            },
+            {
+                header : HRMS_LABELS.lblKey,
+                dataIndex : 'key',
+                width: 180,
+                field : {
+                    type : 'textfield'
+                },
+            },
+            {
+                header : HRMS_LABELS.lblValue,
+                dataIndex : 'value',
+                width: 180,
+                field : {
+                    type : 'numberfield'
+                },
+            },
+            {
+                header : HRMS_LABELS.lblApplyDate,
+                dataIndex : 'apply_date',
+                width: 180,
+                field: {
+                    xtype: 'datefield',  // ← Phải khai báo xtype
+                    format: 'd/m/Y',     // ← Format cho editor
+                    submitFormat: 'Y-m-d' // ← Format khi submit lên server (nếu cần)
+                },
+                renderer: function(value) {
+                    if (value) {
+                        return Ext.Date.format(value, 'd/m/Y');
+                    }
+                    return value;
+                }
+            },
+            {
+                header : HRMS_LABELS.lblDescription,
+                dataIndex : 'description',
+                width: 180,
+                field : {
+                    type : 'textfield'
+                },
+            },
+            {
+                align: "center",
+                header: HRMS_LABELS.lblAction,
+                xtype : 'actioncolumn',
+                width : 100,
+                sortable : false,
+                menuDisabled : true,
+                items : [
+                    {
+                        iconCls : 'cell-editing-delete-row',
+                        tooltip : HRMS_LABELS.lblDelete,
+                        handler: onDeleteClick
+                    }
+                ],
+            }
+        ],
+
+    });
+
+    function initModalEdit() {
+        return Ext.create('Ext.window.Window', {
+            title: HRMS_LABELS.lblAddNew,
+            modal: true,
+            width: 500,
+            items: [
+                {
+                    xtype: 'form',
+                    bodyPadding: 10,
+                    defaults: {
+                        labelWidth: 100, // Set label width for all fields
+                        width: '100%'    // Set input width for all fields
+                    },
+                    items: [
+                        {
+                            xtype: 'hiddenfield',
+                            name: '_token',
+                            value: _token,
+                        },
+                        {
+                            xtype: 'hiddenfield',
+                            name: 'id'
+                        },
+                        {
+                            xtype: 'textfield',
+                            fieldLabel: HRMS_LABELS.lblKey + ' (*)',
+                            name: 'key',
+                            allowBlank: false,
+                        },
+                        {
+                            xtype: 'numberfield',  // Checkbox field
+                            fieldLabel: HRMS_LABELS.lblValue + '(*)',
+                            name: 'value',
+                            allowBlank: false
+                        },
+                        {
+                            xtype: 'datefield',  // Checkbox field
+                            fieldLabel: HRMS_LABELS.lblApplyDate,
+                            name: 'apply_date',
+                            format: 'd/m/Y',
+                            allowBlank: false
+                        },
+                        {
+                            xtype: 'textfield',
+                            fieldLabel: HRMS_LABELS.lblDescription,
+                            name: 'description',
+                        },
+                    ]
+                }
+            ],
+            buttons: {
+                layout: {
+                    pack: 'center'
+                },
+                items: [
+                    {
+                        text: HRMS_LABELS.lblSave,
+                        handler: function () {
+                            var modal = this.up('window');
+                            var form = this.up('window').down('form');
+                            var formData = form.getValues();
+                            saveData(formData, form, modal);
+                        }
+                    },
+                    {
+                        text: HRMS_LABELS.lblClose,
+                        handler: function () {
+                            this.up('window').hide();
+                        }
+                    }
+                ]
+            },
+
+        });
+    }
+
+
+    function onAddClick() {
+        var modalEdit = initModalEdit();
+        modalEdit.show();
+    }
+
+    function saveData(formData, form, modal) {
+        var conn = new Ext.data.Connection();
+        conn.request({
+            url : URL_STORE,
+            timeout : APP.TimeOut,
+            params: formData,
+            success: function(resp, opt) {
+                var result = Ext.util.JSON.decode(resp.responseText);
+                if (result.success) {
+                    $.showMessage('success', result.message);
+
+                    if(parseInt(result.is_continue) === 0){
+                        modal.close();  // Đóng và destroy
+                        Ext.defer(function() {
+                            mainStore.load();
+                            mainGird.getView().scrollTo(0,0);
+                        }, 100);
+                    } else {
+                        form.reset();   // ← Chỉ reset khi tiếp tục thêm
+                        mainStore.load();
+                        mainGird.getView().scrollTo(0,0);
+                    }
+                } else {
+                    $.showMessage('error', result.message);
+                }
+            },
+            failure: function() {
+                $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
+            }
+        });
+    }
+
+
+    function onDeleteClick(view, recIndex, cellIndex, item, e, selection){
+        Ext.MessageBox.show({
+            title: TRANSLATED_LABELS.lblHeaderDelete,
+            msg: TRANSLATED_LABELS.lblConfirmDelete,
+            icon: Ext.MessageBox.WARNING,
+            buttons: Ext.MessageBox.OKCANCEL,
+            fn: function(btn) {
+                if (btn === 'ok') {
+                    if (selection && selection.data) { // Kiểm tra selection tồn tại
+                        Ext.Msg.wait(
+                            TRANSLATED_LABELS.lblDeletingData,
+                            TRANSLATED_LABELS.lblDeletingDataContent,
+                            {
+                                interval: 1000,
+                                duration: 50000,
+                                increment: 50,
+                                scope: this,
+                            }
+                        );
+                        var conn = new Ext.data.Connection();
+                        conn.request({
+                            url: URL_DELETE,
+                            timeout: APP.TimeOut,
+                            params: {
+                                _token: _token,
+                                action: SYSTEM_CONSTANT.ACTION_DELETE,
+                                id: selection.data.id,
+                            },
+                            success: function(resp, opt) {
+                                var result = Ext.util.JSON.decode(resp.responseText);
+                                Ext.Msg.hide();
+                                if (result.success) {
+                                    $.showMessage('success', result.message);
+                                    mainGird.store.remove(selection);
+                                } else {
+                                    $.showMessage('error', result.message);
+                                }
+                            },
+                            failure: function(resp, opt) {
+                                $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+
+    function onFindClick(){
+        mainStore.load();
+    }
+
+    var element = Ext.get('main-gird');
+
+    element.on('resize', function(e) {
+        if (mainGird) {
+            mainGird.update(); // Chỉ gọi nếu `mainGird` tồn tại
+        }
+    });
+
+    function updateRecord(record, id, field, value)
+    {
+        var conn = new Ext.data.Connection();
+        conn.request({
+            url : URL_STORE,
+            timeout : APP.TimeOut,
+            params : {
+                _token: _token,
+                id : id,
+                field : field,
+                value : value,
+
+            },
+            success : function(resp, opt){
+
+                var result = Ext.util.JSON.decode(resp.responseText);
+                if(result.success){
+                    $.showMessage('success', result.message);
+                    record.commit();
+
+                }else{
+
+                    $.showMessage('error', result.message);
+                    record.reject();
+                }
+            },
+            failure : function(){
+                record.reject();
+                $.showMessage('error', TRANSLATED_LABELS.lblConnectServerFailed);
+            }
+        });
+    }
+
+});

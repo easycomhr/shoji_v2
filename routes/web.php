@@ -161,11 +161,6 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::post('/delete', [OfficeController::class, 'destroy'])->name('destroy');
             });
 
-            Route::prefix('parameter')->name('parameter.')->group(function () {
-                Route::get('/index', [ParameterController::class, 'index'])->name('index');
-                Route::post('/store', [ParameterController::class, 'store'])->name('store');
-            });
-
             Route::prefix('skill')->name('skill.')->group(function () {
                 Route::get('/index', [SkillController::class, 'index'])->name('index');
                 Route::get('/search', [SkillController::class, 'search'])->name('search');
@@ -352,6 +347,13 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [AttendancePeriodController::class, 'search'])->name('search');
                 Route::post('/store', [AttendancePeriodController::class, 'store'])->name('store');
                 Route::post('/delete', [AttendancePeriodController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('parameter')->name('parameter.')->group(function () {
+                Route::get('/index', [ParameterController::class, 'index'])->name('index');
+                Route::get('/search', [ParameterController::class, 'search'])->name('search');
+                Route::post('/store', [ParameterController::class, 'store'])->name('store');
+                Route::post('/delete', [ParameterController::class, 'destroy'])->name('destroy');
             });
 
         });
