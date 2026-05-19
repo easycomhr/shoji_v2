@@ -53,6 +53,7 @@ yarn.lock
 *.bak
 *.backup
 *.old
+shoji_old/
 
 # Cache
 bootstrap/cache/*
