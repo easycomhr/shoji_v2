@@ -111,7 +111,7 @@ class UserService
             unset($rows[1]);
         }
 
-        $list_users = User::query()->where('company_id', 1)->get();
+        $list_users = User::query()->where('company_id', config('constants.COMPANY_ID'))->get();
         $list_user_codes = $list_users->pluck('id', 'code')->toArray();
 
         $list = [];

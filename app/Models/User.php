@@ -519,4 +519,54 @@ class User extends Authenticatable
         return $this->probation_start &&
             (!$this->probation_end || $this->probation_end >= now());
     }
+
+    public function insurances(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(UserInsurance::class);
+    }
+
+    public function labourContracts(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(LabourContract::class);
+    }
+
+    public function familyMembers(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(EmployeeFamilyMember::class);
+    }
+
+    public function employeeAllowances(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(EmployeeAllowance::class);
+    }
+
+    public function permissions(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(UserPermission::class);
+    }
+
+    public function finalTimesheets(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(FinalTimesheet::class);
+    }
+
+    public function salaryAdvances(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(SalaryAdvance::class);
+    }
+
+    public function salaryDeductions(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(SalaryDeduction::class);
+    }
+
+    public function salaryAdditions(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(SalaryAddition::class);
+    }
+
+    public function shiftSchedules(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(ShiftSchedule::class);
+    }
 }

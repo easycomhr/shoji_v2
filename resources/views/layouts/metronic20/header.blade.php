@@ -21,9 +21,9 @@
                 </a>
                 <!--end::Logo-->
                 <!--begin::Tabs wrapper-->
-                <div class="align-self-end overflow-auto" id="kt_brand_tabs">
+                <div class="align-self-end overflow-hidden" id="kt_brand_tabs">
                     <!--begin::Header tabs wrapper-->
-                    <div class="header-tabs overflow-auto mx-4 ms-lg-10 mb-5 mb-lg-0" id="kt_header_tabs" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_header_navs_wrapper', lg: '#kt_brand_tabs'}">
+                    <div class="header-tabs overflow-hidden mx-4 ms-lg-10 mb-5 mb-lg-0" id="kt_header_tabs" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_header_navs_wrapper', lg: '#kt_brand_tabs'}">
                         <!--begin::Header tabs-->
                         <ul class="nav flex-nowrap text-nowrap">
                             @foreach(config('menus.hrms') as $key => $menu)
@@ -939,7 +939,7 @@
                         <!--begin::Name-->
                         <div class="d-none d-md-flex flex-column align-items-end justify-content-center me-2 me-md-4">
                             <span class="text-white opacity-75 fs-8 fw-semibold lh-1 mb-1">{{ auth()->user()->name ?? '' }}</span>
-                            <span class="text-white fs-8 fw-bold lh-1">{{ auth()->user()->position_name ?? 'Developer' }}</span>
+                            <span class="text-white fs-8 fw-bold lh-1">{{ auth()->user()->position?->name ?? auth()->user()->role ?? '' }}</span>
                         </div>
                         <!--end::Name-->
                         <!--begin::Symbol-->
