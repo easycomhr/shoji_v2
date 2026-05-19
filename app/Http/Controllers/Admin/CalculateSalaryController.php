@@ -167,6 +167,7 @@ class CalculateSalaryController extends Controller
             $salaryPeriod = SalaryPeriod::find($validated['salary_period_id']);
 
             $query = UserMonthlySalaryDetail::with('user')
+                ->where('company_id', config('constants.COMPANY_ID'))
                 ->forPeriod($salaryPeriod->to_date->month, $salaryPeriod->to_date->year);
 
             if (isset($validated['department_id'])) {

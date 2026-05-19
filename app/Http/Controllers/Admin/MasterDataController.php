@@ -92,7 +92,7 @@ class MasterDataController extends Controller
                 'id' => $user->id,
                 'code' => $user->code,
                 'name' => $user->name,
-                'custom_name' => $user->custom_name,
+                'custom_name' => $user->code . ' - ' . $user->name,
             ];
         }
 
@@ -178,6 +178,7 @@ class MasterDataController extends Controller
     {
         $data = SalaryPeriod::query()
             ->select('id', 'from_date', 'to_date', 'name', 'is_locked', 'standard_working_days')
+            ->where('company_id', config('constants.COMPANY_ID'))
             ->orderByDesc('to_date')
             ->get();
 

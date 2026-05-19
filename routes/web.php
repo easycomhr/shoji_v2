@@ -21,6 +21,10 @@ use App\Http\Controllers\Admin\LevelController;
 use App\Http\Controllers\Admin\MasterDataController;
 use App\Http\Controllers\Admin\MonthlyLeaveBalanceController;
 use App\Http\Controllers\Admin\MonthlyLeaveController;
+use App\Http\Controllers\Admin\DbMigrationController;
+use App\Http\Controllers\Admin\InsuranceController;
+use App\Http\Controllers\Admin\ChangeEmployeeCodeController;
+use App\Http\Controllers\Admin\LabourContractController;
 use App\Http\Controllers\Admin\NationController;
 use App\Http\Controllers\Admin\OfficeController;
 use App\Http\Controllers\Admin\OvertimeTypeController;
@@ -326,6 +330,32 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/search', [OvertimeTypeController::class, 'search'])->name('search');
                 Route::post('/store', [OvertimeTypeController::class, 'store'])->name('store');
                 Route::post('/destroy', [OvertimeTypeController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('insurance')->name('insurance.')->group(function () {
+                Route::get('/', [InsuranceController::class, 'index'])->name('index');
+                Route::match(['GET', 'POST'], '/search', [InsuranceController::class, 'search'])->name('search');
+                Route::post('/store', [InsuranceController::class, 'store'])->name('store');
+                Route::post('/destroy', [InsuranceController::class, 'destroy'])->name('destroy');
+            });
+
+            Route::prefix('db_migration')->name('db-migration.')->group(function () {
+                Route::get('/', [DbMigrationController::class, 'index'])->name('index');
+                Route::get('/preview', [DbMigrationController::class, 'preview'])->name('preview');
+                Route::post('/sync', [DbMigrationController::class, 'sync'])->name('sync');
+            });
+
+            Route::prefix('change-employee-code')->name('change_employee_code.')->group(function () {
+                Route::get('/', [ChangeEmployeeCodeController::class, 'index'])->name('index');
+                Route::post('/process', [ChangeEmployeeCodeController::class, 'process'])->name('process');
+            });
+
+            Route::prefix('labour_contracts')->name('labour_contracts.')->group(function () {
+                Route::get('/', [LabourContractController::class, 'index'])->name('index');
+                Route::match(['GET', 'POST'], '/search', [LabourContractController::class, 'search'])->name('search');
+                Route::post('/store', [LabourContractController::class, 'store'])->name('store');
+                Route::post('/destroy', [LabourContractController::class, 'destroy'])->name('destroy');
+                Route::get('/export', [LabourContractController::class, 'exportExcel'])->name('export');
             });
 
         });
